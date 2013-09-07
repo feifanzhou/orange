@@ -11,6 +11,7 @@
 #  end_at     :datetime
 #  type       :string(255)
 #  user_id    :integer
+#  item_id    :integer
 #
 
 class Item < ActiveRecord::Base
@@ -23,10 +24,13 @@ class Item < ActiveRecord::Base
   has_many :item_followers
   has_many :users, through: :item_followers
 
+  belongs_to :item
+  has_many :subitems, foreign_key: 'item_id', class_name: 'Item'
+
   def as_json(options = {})
   	return { type: type }.merge super
   end
-  
+
   def creator
   	return User.find(self.user_id)
   end

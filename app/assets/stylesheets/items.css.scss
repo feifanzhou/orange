@@ -17,6 +17,7 @@
     .PickerItem {
       box-sizing: border-box;
       display: inline-block;
+      font-size: 18px;
       padding: 10px 0;
       text-align: center;
       width: 60px;
@@ -38,6 +39,22 @@
   #itemName {
     display: inline-block;
     font-size: 24px;
-    margin-top: -2px;
+    line-height: 1.2em;
+    margin-top: -6px;
+    vertical-align: top;
+    width: 170px;
+  }
+  #addSubItemsButton {
+    width: 100%;
+  }
+
+  #subitems {
+    #subitemsList {
+      list-style: none;
+      margin: 0 0 10px 0;
+    }
+    #item_name {
+      width: 186px;
+    }
   }
 }

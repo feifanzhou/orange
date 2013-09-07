@@ -426,3 +426,38 @@ $('body').on('click', '.ItemListItem', function() {
 		}
 	});
 });
+
+$('body').on('click', '#addSubItemsButton', function(event) {
+	event.stopPropagation();
+	$(this).addClass('Hidden');
+	$('#subitems').removeClass('Hidden');
+});
+
+$('body').on('keypress', '#item_name', function(event) {
+	var code = (event.keyCode) ? event.keyCode : event.which;
+	if (code != 13)
+		return;
+
+	var itemID = $('#itemContainer').data('item-id');
+	var input = $(this).val();
+	$.ajax({
+		url: '/items',
+		type: 'POST',
+		data: { 
+			parent_ID: itemID, 
+			item: {
+				name: input 
+			}
+		},
+		dataType: 'JSON',
+		success: function(data) {
+			var newID = data.id;
+			var li = "\
+				<li class='NewItem'><a href='/items/" + newID + "'>" + input + "\
+				</a></li>\
+			";
+			$('#subitemsList').append(li);
+			$('#item_name').val('');
+		}
+	});
+});

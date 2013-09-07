@@ -11,6 +11,7 @@
 #  end_at     :datetime
 #  type       :string(255)
 #  user_id    :integer
+#  item_id    :integer
 #
 
 class Task < Item

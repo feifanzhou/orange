@@ -44,6 +44,11 @@ $('body').on('click', '.CategoryListItem', function() {
 	if ($(this).hasClass('Selected')) {
 		$(this).removeClass('Selected');
 		$('#content').html(timelineHeader(2));
+		var dataToggle = $('#sidebarModeToggle .Selected').data('toggle');
+		if (dataToggle == 'categories')
+			loadAllCategories();
+		else if (dataToggle == 'people')
+			loadAllPeople();
 		return;
 	}
 	$('.SameItemBar').remove();

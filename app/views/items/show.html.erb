@@ -6,5 +6,14 @@
     <li class='PickerItem Icon <%= "Selected" if @item.type == "Note" %>'>&#xE806;</li>  <!-- Message -->
   </ul>
   <span class='Checkbox Icon <%= "Checked" if (@item.status == "Completed") %>' id='itemCheckbox'><%= (@item.status == 'Completed') ? '&#xE807;'.html_safe : '&#xE808;'.html_safe %></span> <h1 id='itemName'><%= @item.name %></h1>
+  <button class='btn <%= "Hidden" if @item.subitems.count > 0 %>' id='addSubItemsButton'>Add Subitems</button>
+  <div class='<%= "Hidden" if !@item.subitems || @item.subitems.count <= 0 %>' id='subitems'>
+    <ol id='subitemsList'>
+      <% @item.subitems.each do |s| %>
+        <li><%= link_to s.name, s %></li>
+      <% end %>
+    </ol>
+    <input type='text' name='item[name]' id='item_name' placeholder='Item name' />
+  </div>
 </div>
 <!-- END_MODAL -->
