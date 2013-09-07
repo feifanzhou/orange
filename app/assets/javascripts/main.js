@@ -59,8 +59,9 @@ $('body').on('click', '.CategoryListItem', function() {
 			success: function(data) {
 				var html = itemsList(data.items, 'contentItems');
 				$('#content').html(html);
+				$('#content').append("<div class='Hidden' id='itemsListDetail'></div>");
 			}
-		})
+		});
 	}
 	else if (type == 'User') {
 		var userID = $(this).data('user-id');
@@ -72,6 +73,7 @@ $('body').on('click', '.CategoryListItem', function() {
 			success: function(data) {
 				var html = itemsList(data.items, 'contentItems');
 				$('#content').append(html);
+				$('#content').append("<div class='Hidden' id='itemsListDetail'></div>");
 			}
 		});
 	}

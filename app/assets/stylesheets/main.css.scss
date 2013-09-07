@@ -98,6 +98,7 @@
   position: absolute;
   right: 0;
   top: 40px;
+  @include vendor-prefix(transition, right 0.5s);
   #timelineHeader {
     border-left: 1px solid #222;
     height: 46px;
@@ -168,6 +169,11 @@
       height: 20px;
       padding: 6px 0;
       position: relative;
+      @include vendor-prefix(transition, background 0.5s);
+      &:hover {
+        background: transparentize($mainOrange, 0.75);
+        cursor: pointer;
+      }
       .ItemListItemIcon {
         color: $mainOrange;
         left: 0;
@@ -208,6 +214,19 @@
         height: 8px;
         position: absolute;
       }
+    }
+  }
+  #itemsListDetail {
+    background: image-url('debut.png');
+    bottom: 0;
+    margin-right: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 0px;
+    @include vendor-prefix(transition, #{ right 0.5s, width 0.5s });
+    &.Active {
+      width: 220px;
     }
   }
 }

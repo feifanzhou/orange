@@ -16,7 +16,7 @@ function itemListItem(item) {
 		isChecked = true;
 	}
 
-	return "<li class='ItemListItem' data-item-id='" + item.id + "' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Checkbox Icon " + ((isChecked) ? "Checked" : "") + "'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
+	return "<li class='ItemListItem' data-item-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Checkbox Icon " + ((isChecked) ? "Checked" : "") + "'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
 }
 function itemsList(items, customID) {
 	if (customID == null)
@@ -405,6 +405,24 @@ $('body').on('click', '.TimelineItem', function() {
 				content: html,
 				html: true
 			}).popover('show');
+		}
+	});
+});
+
+$('body').on('click', '.ItemListItem', function() {
+	$('#itemsListDetail').removeClass('Hidden');
+	$('#itemsListDetail').addClass('Active');
+	var item = $(this);
+	var itemID = $(item).data('item-id');
+	var path = '/items/' + itemID;
+	$.ajax({
+		url: path,
+		type: 'GET',
+		success: function(data) {
+			var cutStart = data.indexOf('<!-- BEGIN_MODAL -->');
+			var cutEnd = data.indexOf('<!-- END_MODAL -->');
+			var html = data.slice(cutStart, cutEnd);
+			$('#itemsListDetail').html(html);
 		}
 	});
 });
