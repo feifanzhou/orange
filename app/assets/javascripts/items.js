@@ -236,9 +236,10 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 			dataType: 'JSON',
 			success: function(data) {
 				counter += 1;
+				inners.push([]);
 				var id = groups[counter - 1].id;
-				var rowHTML = "<div class='TimelineRow' data-group-type='" + groupType + "' data-group-id='" + id + "'>";
 				var items = data.items;
+
 				var endDays;
 				switch (zoomLevel) {
 					case 1:
@@ -255,7 +256,6 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						break;
 				}
 				var sortedItems = new Array();
-				console.log('counter: ' + counter);
 				for (var j = 0; j < items.length; j++) {
 					var item = items[j];
 					var end_at = new Date(item.end_at);
@@ -268,7 +268,6 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 					var level = 0;	// Start at lowest level
 					var sorted = false
 					while (!sorted) {
-						console.log('try sorting at level: ' + level);
 						if (sortedItems[level] == null || sortedItems[level].length == 0) {
 							// Creating a new level if needed
 							sortedItems[level] = [item];
@@ -306,17 +305,16 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 				var markerOffset = 0.5 * markerWidth;	// To line up with marker, in middle of block;
 				var hourDivisor = (zoomLevel == 1 || zoomLevel == 2) ? 12 : 24;
 				var now = new Date();
+				console.log('sortedItems: ' + JSON.stringify(sortedItems, null, 2));
+				console.log('sortedItems length: ' + sortedItems.length);
 				for (var j = 0; j < sortedItems.length; j++) {
-					rowHTML += "<div style='height: " + LEVEL_HEIGHT + "px' class='TimelineRowLevel'>";
+					var rowHTML = "<div style='height: " + LEVEL_HEIGHT + "px' class='TimelineRowLevel'>";
 					for (var k = 0; k < sortedItems[j].length; k++) {
 						var item = sortedItems[j][k];
 						var start_at = new Date(item.start_at);
 						var end_at = new Date(item.end_at);
 						var daysDiff = dateDiffInDays(now, start_at);
 						var left = (doubleZoom) ? (daysDiff * 2 * markerWidth) : (daysDiff * markerWidth);
-						if (item.id == 5)
-							console.log('#5 daysDiff: ' + daysDiff);
-						// alert(start_at.getHours());
 						if (doubleZoom) {
 							if (start_at.getHours() >= 12)
 								left += markerWidth;
@@ -326,26 +324,8 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 							left += (start_at.getHours() / 24) * markerWidth;
 						}
 						left += markerOffset;
-						if (item.id == 5)
-							console.log('#5 left: ' + left);
 
 						var durationDays = dateDiffInDays(start_at, end_at);
-						// var fractionalDayDuration = end_at.getHours() / 24;
-						// durationDays += fractionalDayDuration;
-						// if (doubleZoom)
-						// 	durationDays /= 2;
-						// var iWidth = durationDays / endDays * width;
-						// var iWidth = (doubleZoom) ? (durationDays * 2 * markerWidth) : (durationDays * markerWidth);
-						// var durationHours = dateDiffInHours(start_at, end_at);
-						// durationHours %= 24;
-						// if (doubleZoom) {
-						// 	if (durationHours >= 12)
-						// 		iWidth += markerWidth;
-						// 	iWidth += (durationHours % 12) / 12 * markerWidth;
-						// }
-						// else {
-						// 	iWidth += (durationHours / 24) * markerWidth;
-						// }
 						var msdelta = dateDiffInMS(start_at, end_at);
 						var iWidth;
 						if (doubleZoom)
@@ -358,14 +338,17 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 
 						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' class='TimelineItem'>" + item.name + "</div>";
 					}
-					rowHTML += '</div></div>';
-					// html += rowHTML;
-					inners.push(rowHTML);
+					rowHTML += '</div>';
+					inners[counter - 1].push(rowHTML);
 				}
 
 				if (counter >= (groups.length)) {
-					for (var x = 0; x < inners.length; x++)
-						html += inners[x];
+					for (var x = 0; x < inners.length; x++) {
+						html += "<div class='TimelineRow' data-group-type='" + groupType + "'>";
+						for (var y = 0; y < inners[x].length; y++)
+							html += inners[x][y];
+						html += '</div>';
+					}
 					$('#content').append(html);
 				}
 			}
