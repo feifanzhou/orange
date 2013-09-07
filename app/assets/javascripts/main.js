@@ -7,6 +7,7 @@ function loadAllCategories() {
 			var html = categoriesList(data.categories, 'sidebarCategories');
 			$('#sidebarContent').html(html);
 			$('#content').html(timelineHeader(2));
+			drawTimelineForGroups(data.categories, 'Category', 2);
 		}
 	});
 }
@@ -19,6 +20,7 @@ function loadAllPeople() {
 			var html = usersList(data.users, 'sidebarCategories');
 			$('#sidebarContent').html(html);
 			$('#content').html(timelineHeader(2));
+			$('#content').append(timelineForGroups(data.users, 'User', 2));
 		}
 	});
 }

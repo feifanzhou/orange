@@ -144,11 +144,7 @@ function headerMarkersForZoomLevel(zoomLevel) {
 	}
 	return markers;
 }
-function timelineHeader(zoomLevel) {
-	if (zoomLevel == null)
-		zoomLevel = 2;
-
-	var markers = headerMarkersForZoomLevel(zoomLevel);
+function divisorForZoomLevel(zoomLevel) {
 	var divisor;
 	switch (zoomLevel) {
 		case 1:
@@ -164,11 +160,18 @@ function timelineHeader(zoomLevel) {
 			divisor = 92;
 			break;
 	}
+	return divisor;
+}
+function timelineHeader(zoomLevel) {
+	if (zoomLevel == null)
+		zoomLevel = 2;
+
+	var markers = headerMarkersForZoomLevel(zoomLevel);
+	var divisor = divisorForZoomLevel(zoomLevel);
 	var width = $('#content').width();
 	var str = '';
 	var w = 1 / divisor * width;
 	for (var i = 0; i < markers.length; i++) {
-		console.log(i);
 		var m = markers[i];
 		var style = "style='width: " + w + 'px' + "' ";
 		m = m.slice(0, 6) + style + m.slice(6);
@@ -191,19 +194,47 @@ function timelineHeader(zoomLevel) {
 	return html;
 }
 
-function timelineForGroups(groups, groupType, zoomLevel) {
+var _MS_PER_DAY = 1000 * 60 * 60 * 24;
+var _MS_PER_HOUR = 1000 * 60 * 60;
+
+// a and b are javascript Date objects
+function dateDiffInDays(a, b) {
+  // Discard the time and time-zone information.
+  var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+  return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+function dateDiffInHours(a, b) {
+  // Discard the time and time-zone information.
+  var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate(), a.getHours(), a.getMinutes(), a.getSeconds());
+  console.log('utc1: ' + utc1);
+  var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate(), b.getHours(), b.getMinutes(), b.getSeconds());
+  console.log('utc2: ' + utc2);
+
+  return Math.floor((utc2 - utc1) / _MS_PER_HOUR);
+}
+function drawTimelineForGroups(groups, groupType, zoomLevel) {
 	var rootPath = groupType.toLowerCase();
 	// TODO: Limit items by zoomLevel. Don't get every single item ever associated with group
+	var html = '';
+	var inners = new Array();
+	var counter = 0;
+	var doubleZoom = (zoomLevel == 1 || zoomLevel == 2) ? true : false
+	var hues = new Array();
+	for (var i = 0; i < groups.length; i++)
+		hues.push(Math.round(Math.random() * 360));
+	
 	for (var i = 0; i < groups.length; i++) {
-		var id = groups[i].id;
+		console.log('i@1: ' + i);
 		$.ajax({
-			url: '/' + rootPath + '/' + id + '/items',
+			url: '/' + rootPath + '/' + groups[i].id + '/items',
 			type: 'GET',
 			dataType: 'JSON',
 			success: function(data) {
-				// var html = categoriesList(data.categories, 'sidebarCategories');
-				// $('#sidebarContent').html(html);
-				// $('#content').html(timelineHeader(2));
+				counter += 1;
+				var id = groups[counter - 1].id;
+				var rowHTML = "<div class='TimelineRow' data-group-type='" + groupType + "' data-group-id='" + id + "'>";
 				var items = data.items;
 				var endDays;
 				switch (zoomLevel) {
@@ -233,7 +264,7 @@ function timelineForGroups(groups, groupType, zoomLevel) {
 					var level = 0;	// Start at lowest level
 					var sorted = false
 					while (!sorted) {
-						if (sortedItems[level].length == 0) {
+						if (sortedItems[level] == null || sortedItems[level].length == 0) {
 							// Creating a new level if needed
 							sortedItems[level] = [item];
 							sorted = true;
@@ -243,7 +274,7 @@ function timelineForGroups(groups, groupType, zoomLevel) {
 						for (var k = 0; k < sortedItems[level].length; k++) {	// Check for any overlapping at this level
 							var start = new Date((sortedItems[level][k]).start_at);
 							var end = new Date((sortedItems[level][k]).end_at);
-							if (start_at >= start && end_at <= end)	// completely overlapping
+							if (start_at >= start && end_at <= end)		// completely overlapping
 								levelOpen = false;
 							if (start_at < start && end_at > start && end_at <= end)	// Overlap beginning of existing
 								levelOpen = false;
@@ -257,6 +288,72 @@ function timelineForGroups(groups, groupType, zoomLevel) {
 						}
 						level += 1;		// If overlapped, increment level and try again
 					}
+				}
+
+				var ROW_HEIGHT = 60;
+				var LEVEL_HEIGHT = 60 / sortedItems.length;
+				var width = $('#content').width();
+				var divisor = divisorForZoomLevel(zoomLevel);
+				var markerWidth = 1 / divisor * width;
+				var markerOffset = 0.5 * markerWidth;	// To line up with marker, in middle of block;
+				var hourDivisor = (zoomLevel == 1 || zoomLevel == 2) ? 12 : 24;
+				var now = new Date();
+				for (var j = 0; j < sortedItems.length; j++) {
+					rowHTML += "<div style='height: " + LEVEL_HEIGHT + "px' class='TimelineRowLevel'>";
+					for (var k = 0; k < sortedItems[j].length; k++) {
+						var item = sortedItems[j][k];
+						var start_at = new Date(item.start_at);
+						var end_at = new Date(item.end_at);
+						var daysDiff = dateDiffInDays(now, start_at);
+						var left = (doubleZoom) ? (daysDiff * 2 * markerWidth) : (daysDiff * markerWidth);
+						// alert(start_at.getHours());
+						if (doubleZoom) {
+							if (start_at.getHours() >= 12)
+								left += markerWidth;
+							left += (start_at.getHours() % 12) / 12 * markerWidth;
+						}
+						else {
+							left += (start_at.getHours() / 24) * markerWidth;
+						}
+						left += markerOffset;
+
+						console.log('start_at: ' + start_at);
+						console.log('end_at: ' + end_at);
+						var durationDays = dateDiffInDays(start_at, end_at);
+						console.log('durationDays: ' + durationDays);
+						// var fractionalDayDuration = end_at.getHours() / 24;
+						// durationDays += fractionalDayDuration;
+						// if (doubleZoom)
+						// 	durationDays /= 2;
+						// var iWidth = durationDays / endDays * width;
+						var iWidth = (doubleZoom) ? (durationDays * 2 * markerWidth) : (durationDays * markerWidth);
+						var durationHours = dateDiffInHours(start_at, end_at);
+						console.log('durationHours: ' + durationHours);
+						durationHours %= 24;
+						if (doubleZoom) {
+							if (durationHours >= 12)
+								iWidth += markerWidth;
+							iWidth += (durationHours % 12) / 12 * markerWidth;
+						}
+						else {
+							iWidth += (durationHours / 24) * markerWidth;
+						}
+
+						var hsl = 'hsl(' + hues[counter] + ', 89, 51)';
+						var color = tinycolor(hsl);
+
+						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' class='TimelineItem'></div>";
+					}
+					rowHTML += '</div>';
+					// html += rowHTML;
+					inners.push(rowHTML);
+				}
+
+				if (counter >= (groups.length)) {
+					console.log('Last Success callback');
+					for (var x = 0; x < inners.length; x++)
+						html += inners[x];
+					$('#content').append(html);
 				}
 			}
 		});

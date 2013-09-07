@@ -70,6 +70,8 @@
       .CategoryListItem {
         border-bottom: 1px solid #222;
         border-top: 1px solid #555;
+        height: 28px;
+        line-height: 28px;
         padding: 15px;
         @include vendor-prefix(transition, background 0.5s);
         &:hover {
@@ -99,6 +101,7 @@
   #timelineHeader {
     border-left: 1px solid #222;
     height: 46px;
+    margin-bottom: 9px;
     width: 100%;
     #timelineHeaderMeta {
       background: #444;
@@ -187,5 +190,24 @@
     top: 0;
     width: 1px;
     @include vendor-prefix(transition, left 0.1s);
+  }
+  .TimelineRow {
+    height: 60px;
+    width: 100%;
+    @include vendor-prefix(transition, background 0.5s);
+    &:hover {
+      background: #222;
+    }
+    .TimelineRowLevel {
+      position: relative;
+      .TimelineItem {
+        // background: $mainOrange;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 0;
+        height: 8px;
+        position: absolute;
+      }
+    }
   }
 }
