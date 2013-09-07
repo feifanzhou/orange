@@ -13,6 +13,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def all_items
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.js { render json: { user: @user, items: @user.all_items } }
+    end
+  end
+
   def created_items
     @user = User.find(params[:id])
     respond_to do |format|

@@ -20,6 +20,23 @@ class User < ActiveRecord::Base
   has_many :item_followers
   has_many :items, through: :item_followers
 
+  # TODO: Why does User.items itself not work…?
+  def all_items
+    item_ids = []
+    items = self.created_items
+    items << self.assigned_items
+    items << followed_items
+    items.flatten!
+    no_dups = []
+    items.each do |i|
+      if !item_ids.include? i.id
+        no_dups << i
+        item_ids << i.id
+      end
+    end
+    return no_dups
+  end
+
   def created_items
   	return Item.where(:user_id => self.id).all  # all may not be needed: http://stackoverflow.com/a/14867137/472768
   end

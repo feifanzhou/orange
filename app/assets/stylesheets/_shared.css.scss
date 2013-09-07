@@ -14,6 +14,10 @@ $Twinkle: image-url('twinkle.png');
   -o-#{$name}: #{ $argument };
 }
 
+body {
+	background: $Twinkle;
+}
+
 .Icon {
 	font-family: $Zorange !important;
 }
@@ -37,6 +41,10 @@ $Twinkle: image-url('twinkle.png');
 		&:hover {
 			background: #666;
 			cursor: pointer;
+		}
+		&.SegmentToggleItemSmall {
+			margin: 0;
+			width: auto;
 		}
 		&.Selected {
 			background: #CCC;

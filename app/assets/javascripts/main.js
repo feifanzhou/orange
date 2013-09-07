@@ -30,8 +30,8 @@ function toggleSidebarContent(content) {
 	else
 		console.log('toggle invalid content');
 }
-$('body').on('click', '.SegmentToggleItem', function() {
-	$('.SegmentToggleItem').removeClass('Selected');
+$('body').on('click', '#sidebarModeToggle .SegmentToggleItem', function() {
+	$('#sidebarModeToggle .SegmentToggleItem').removeClass('Selected');
 	$(this).addClass('Selected');
 	toggleSidebarContent($(this).data('toggle'));
 });
@@ -44,7 +44,6 @@ $('body').on('click', '.CategoryListItem', function() {
 	}
 	$('.CategoryListItem').removeClass('Selected');
 	$(this).addClass('Selected');
-	$('#content').html('<p>List view</p>');
 	var type = $(this).data('type');
 	if (type == 'Category') {
 		var categoryID = $(this).data('category-id');
@@ -60,13 +59,14 @@ $('body').on('click', '.CategoryListItem', function() {
 	}
 	else if (type == 'User') {
 		var userID = $(this).data('user-id');
+		$('#content').html(userItemsListFilter(0, userID));
 		$.ajax({
-			url: '/user/' + userID + '/items',
+			url: '/user/' + userID + '/all_items',
 			type: 'GET',
 			dataType: 'JSON',
 			success: function(data) {
 				var html = itemsList(data.items, 'contentItems');
-				$('#content').html(html);
+				$('#content').append(html);
 			}
 		});
 	}
