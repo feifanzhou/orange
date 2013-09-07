@@ -45,4 +45,17 @@ $('body').on('click', '.CategoryListItem', function() {
 	$('.CategoryListItem').removeClass('Selected');
 	$(this).addClass('Selected');
 	$('#content').html('<p>List view</p>');
+	var type = $(this).data('type');
+	if (type == 'Category') {
+		var categoryID = $(this).data('category-id');
+		$.ajax({
+			url: '/category/' + categoryID + '/items',
+			type: 'GET',
+			dataType: 'JSON',
+			success: function(data) {
+				var html = itemsList(data.items, 'contentItems');
+				$('#content').html(html);
+			}
+		})
+	}
 });

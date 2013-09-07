@@ -1,5 +1,5 @@
 function categoryListItem(categoryItem) {
-	return "<li class='CategoryListItem' data-category-id='" + categoryItem.id + "'>" + categoryItem.name + "</li>";
+	return "<li class='CategoryListItem' data-type='Category' data-category-id='" + categoryItem.id + "'>" + categoryItem.name + "</li>";
 }
 function categoriesList(categories, customID) {
 	if (customID == null)

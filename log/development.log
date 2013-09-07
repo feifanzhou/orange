@@ -7607,3 +7607,1059 @@ Migrating to AddCreatorIdToItem (20130907045152)
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.8ms)
+Compiled items.js  (0ms)  (pid 5749)
+Compiled application.js  (6ms)  (pid 5749)
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:48 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /items.js - 200 OK (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:06:49 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.6ms)
+Compiled items.js  (0ms)  (pid 5749)
+Compiled application.js  (3ms)  (pid 5749)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /items.js - 200 OK (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:13:49 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:23:37 -0400
+
+SyntaxError (/Users/Feifan/Developer/orange/config/routes.rb:14: syntax error, unexpected =>
+...  get '/category/:id/items', => 'categories#items', as: :ite...
+...                               ^
+/Users/Feifan/Developer/orange/config/routes.rb:14: syntax error, unexpected ',', expecting keyword_end
+.../items', => 'categories#items', as: :items_for_category
+...                               ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `block in load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:236:in `load_dependency'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `load'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:78:in `call'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:78:in `execute'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:86:in `execute_if_updated'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  railties (3.2.13) lib/rails/application/finisher.rb:68:in `block (2 levels) in <module:Finisher>'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:451:in `_run__1444224424716680843__prepare__4322359230115263471__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_prepare_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Feifan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Feifan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Feifan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Compiled categories.js  (0ms)  (pid 5749)
+Compiled main.js  (0ms)  (pid 5749)
+Compiled users.js  (0ms)  (pid 5749)
+Compiled application.js  (5ms)  (pid 5749)
+Completed 200 OK in 92ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /categories.js - 200 OK (1ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 01:25:07 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 01:25:08 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:26:41 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.8ms)
+Compiled main.js  (0ms)  (pid 5749)
+Compiled application.js  (4ms)  (pid 5749)
+Completed 200 OK in 71ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:26:42 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:26:44 -0400
+
+ActionController::RoutingError (undefined local variable or method `item_categories' for #<Class:0x007fa936ab0ce8>):
+  app/models/category.rb:15:in `<class:Category>'
+  app/models/category.rb:11:in `<top (required)>'
+  app/controllers/categories_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:26:46 -0400
+Processing by CategoriesController#index as JSON
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Processing by CategoriesController#index as HTML
+  Rendered categories/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:15 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:27:18 -0400
+Processing by CategoriesController#index as JSON
+  Rendered categories/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:27:19 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:27:21 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:27:21 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:27:22 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:22 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:27:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:27:24 -0400
+Processing by CategoriesController#index as JSON
+  Rendered categories/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered main/main.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 65ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /reset.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /_shared.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /_fonts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /categories.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /items.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /modernizr.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /plugins.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /categories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /items.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /main.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:02 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-07 01:28:03 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 44ms (Views: 3.0ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:28:05 -0400
+
+ActionController::RoutingError (undefined local variable or method `item_categories' for #<Class:0x007f9e10cef558>):
+  app/models/category.rb:15:in `<class:Category>'
+  app/models/category.rb:11:in `<top (required)>'
+  app/controllers/categories_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:28:49 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:28:51 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:28:52 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/category/1/items" for 127.0.0.1 at 2013-09-07 01:28:53 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (3.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 74ms (Views: 48.9ms | ActiveRecord: 6.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:32:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:33:00 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/items" for 127.0.0.1 at 2013-09-07 01:33:01 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.8ms)
+Compiled items.js  (0ms)  (pid 18179)
+Compiled application.js  (4ms)  (pid 18179)
+Completed 200 OK in 74ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /items.js - 200 OK (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 01:33:48 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 01:33:49 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/items" for 127.0.0.1 at 2013-09-07 01:33:50 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/2/items" for 127.0.0.1 at 2013-09-07 01:33:51 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/3/items" for 127.0.0.1 at 2013-09-07 01:33:53 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/1/items" for 127.0.0.1 at 2013-09-07 01:33:54 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.7ms)

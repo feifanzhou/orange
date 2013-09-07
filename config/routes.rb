@@ -11,6 +11,8 @@ Orange::Application.routes.draw do
   resources :tasks
   resources :users
 
+  get '/category/:id/items' => 'categories#items', as: :items_for_category
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
