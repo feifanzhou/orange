@@ -6,7 +6,7 @@ function loadAllCategories() {
 		success: function(data) {
 			var html = categoriesList(data.categories, 'sidebarCategories');
 			$('#sidebarContent').html(html);
-			$('#content').append(timelineHeader(2));
+			$('#content').html(timelineHeader(2));
 		}
 	});
 }

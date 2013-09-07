@@ -190,3 +190,75 @@ function timelineHeader(zoomLevel) {
 		</div>";
 	return html;
 }
+
+function timelineForGroups(groups, groupType, zoomLevel) {
+	var rootPath = groupType.toLowerCase();
+	// TODO: Limit items by zoomLevel. Don't get every single item ever associated with group
+	for (var i = 0; i < groups.length; i++) {
+		var id = groups[i].id;
+		$.ajax({
+			url: '/' + rootPath + '/' + id + '/items',
+			type: 'GET',
+			dataType: 'JSON',
+			success: function(data) {
+				// var html = categoriesList(data.categories, 'sidebarCategories');
+				// $('#sidebarContent').html(html);
+				// $('#content').html(timelineHeader(2));
+				var items = data.items;
+				var endDays;
+				switch (zoomLevel) {
+					case 1:
+						endDays = 7;
+						break;
+					case 2:
+						endDays = 14;
+						break;
+					case 3:
+						endDays = 31;
+						break;
+					case 4:
+						endDays = 92;
+						break;
+				}
+				var sortedItems = new Array();
+				for (var j = 0; j < items.length; j++) {
+					var item = items[j];
+					var end_at = new Date(item.end_at);
+					if (end_at <= new Date())
+						continue;
+					var start_at = new Date(item.start_at);
+					if (start_at >= new Date().setDate(new Date().getDate() + endDays))
+						continue;
+
+					var level = 0;	// Start at lowest level
+					var sorted = false
+					while (!sorted) {
+						if (sortedItems[level].length == 0) {
+							// Creating a new level if needed
+							sortedItems[level] = [item];
+							sorted = true;
+							break;
+						}
+						var levelOpen = true;
+						for (var k = 0; k < sortedItems[level].length; k++) {	// Check for any overlapping at this level
+							var start = new Date((sortedItems[level][k]).start_at);
+							var end = new Date((sortedItems[level][k]).end_at);
+							if (start_at >= start && end_at <= end)	// completely overlapping
+								levelOpen = false;
+							if (start_at < start && end_at > start && end_at <= end)	// Overlap beginning of existing
+								levelOpen = false;
+							if (start_at > start && start_at < end && end_at > end)		// Overlap end of existing
+								levelOpen = false;
+						}
+						if (levelOpen) {	// If no overlap, add to current level
+							sortedItems[level].push(item);
+							sorted = true;
+							break;
+						}
+						level += 1;		// If overlapped, increment level and try again
+					}
+				}
+			}
+		});
+	}
+}
