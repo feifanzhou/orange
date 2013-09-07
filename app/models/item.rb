@@ -18,6 +18,10 @@ class Item < ActiveRecord::Base
 
   belongs_to :user
   has_many :categories, through: :item_categories
+  has_one :item_assignees
+  has_one :users, through: :item_assignees
+  has_many :item_followers
+  has_many :users, through: :item_followers
 
   def creator
   	return User.find(self.user_id)

@@ -13,6 +13,11 @@ Orange::Application.routes.draw do
 
   get '/category/:id/items' => 'categories#items', as: :items_for_category
 
+  get '/user/:id/items' => 'users#items', as: :items_for_user
+  get '/user/:id/created_items' => 'users#created_items', as: :user_created_items
+  get '/user/:id/assigned_items' => 'users#assigned_items', as: :user_assigned_items
+  get '/user/:id/followed_items' => 'users#followed_items', as: :user_followed_items
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

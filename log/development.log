@@ -8663,3 +8663,27 @@ Processing by CategoriesController#items as JSON
   [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
   [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
 Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateItems (20130907023641)
+Migrating to AddStartAndEndToItems (20130907031433)
+Migrating to CreateCategories (20130907034143)
+Migrating to CreateUsers (20130907041748)
+Migrating to AddTypeToItem (20130907044657)
+Migrating to CreateItemCategories (20130907045052)
+Migrating to AddCreatorIdToItem (20130907045152)
+Migrating to CreateItemAssignees (20130907054848)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "item_assignees" ("id" serial primary key, "item_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130907054848')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateItemFollowers (20130907054912)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "item_followers" ("id" serial primary key, "item_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130907054912')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
