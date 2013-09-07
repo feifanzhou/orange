@@ -4,9 +4,7 @@ $mainOrange: rgb(241, 98, 20);
 
 $Zorange: 'zorange';
 
-.Icon {
-	font-family: $Zorange !important;
-}
+$Twinkle: image-url('twinkle.png');
 
 @mixin vendor-prefix($name, $argument) {
   #{$name}: #{ $argument };
@@ -14,4 +12,34 @@ $Zorange: 'zorange';
   -ms-#{$name}: #{ $argument };
   -moz-#{$name}: #{ $argument };
   -o-#{$name}: #{ $argument };
+}
+
+.Icon {
+	font-family: $Zorange !important;
+}
+
+.SegmentToggle {
+	display: block;
+	list-style: none;
+	margin: 10px 20px;
+	padding: 0;
+	width: 100%;
+	.SegmentToggleItem {
+		box-sizing: border-box;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 18px;
+		margin: 0;
+		padding: 8px;
+		text-align: center;
+		width: 97px;
+		@include vendor-prefix(transition, background 0.75s);
+		&:hover {
+			background: transparentize(white, 0.75);
+			cursor: pointer;
+		}
+		&.Selected {
+			background: transparentize(white, 0.5);
+		}
+	}
 }

@@ -4,8 +4,9 @@ Orange::Application.routes.draw do
   
   root to: 'main#main'
 
-  resources :users
+  resources :categories
   resources :items
+  resources :users
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

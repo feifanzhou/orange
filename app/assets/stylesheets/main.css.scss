@@ -5,9 +5,10 @@
 
 @import "shared";
 
+/***** Header styles *****/
 #headerBar {
 	background: $mainOrange;
-	height: 60px;
+	height: 40px;
 	padding: 0 40px;
 	position: fixed;
 	width: 100%;
@@ -15,6 +16,7 @@
 		display: inline-block;
 		float: left;
 		list-style: none;
+    margin: 0.25em 0;
 		padding: 0;
 		width: 180px;
 		&#headerViewMode {
@@ -27,7 +29,8 @@
 		li {
       color: transparentize(white, 0.15);
 			display: inline-block;
-			font-size: 24px;
+			font-size: 20px;
+      line-height: 24px;
       padding: 0 8px;
       @include vendor-prefix(transition, background 0.5s);
       &:hover {
@@ -44,4 +47,29 @@
 		display: none;
 		float: right;
 	}
+}
+
+/***** Sidebar styles *****/
+#sidebar {
+  background: #444;
+  bottom: 0;
+  color: white;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 240px;
+  #sidebarModeToggle {
+    border-bottom: 2px groove transparentize(black, 0.65);
+    width: 100%;
+  }
+}
+
+/***** Content styles *****/
+#content {
+  background: $Twinkle;
+  color: white;
+  left: 240px;
+  position: absolute;
+  right: 0;
+  top: 40px;
 }
