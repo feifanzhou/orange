@@ -58,4 +58,16 @@ $('body').on('click', '.CategoryListItem', function() {
 			}
 		})
 	}
+	else if (type == 'User') {
+		var userID = $(this).data('user-id');
+		$.ajax({
+			url: '/user/' + userID + '/items',
+			type: 'GET',
+			dataType: 'JSON',
+			success: function(data) {
+				var html = itemsList(data.items, 'contentItems');
+				$('#content').html(html);
+			}
+		});
+	}
 });

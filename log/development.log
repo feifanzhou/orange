@@ -8687,3 +8687,127 @@ Migrating to CreateItemFollowers (20130907054912)
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Processing by MainController#main as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (2.3ms)
+Compiled main.js  (0ms)  (pid 18179)
+Compiled application.js  (4ms)  (pid 18179)
+Completed 200 OK in 109ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 02:05:31 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-07 02:05:33 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user/1/items" for 127.0.0.1 at 2013-09-07 02:05:34 -0400
+Processing by UsersController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_followers" ON "items"."id" = "item_followers"."item_id" WHERE "item_followers"."user_id" = 1[0m
+Completed 200 OK in 58ms (Views: 47.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/user/2/items" for 127.0.0.1 at 2013-09-07 02:05:35 -0400
+Processing by UsersController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_followers" ON "items"."id" = "item_followers"."item_id" WHERE "item_followers"."user_id" = 2[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/3/items" for 127.0.0.1 at 2013-09-07 02:05:36 -0400
+Processing by UsersController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_followers" ON "items"."id" = "item_followers"."item_id" WHERE "item_followers"."user_id" = 3[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/2/items" for 127.0.0.1 at 2013-09-07 02:05:37 -0400
+Processing by UsersController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_followers" ON "items"."id" = "item_followers"."item_id" WHERE "item_followers"."user_id" = 2[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/1/items" for 127.0.0.1 at 2013-09-07 02:05:38 -0400
+Processing by UsersController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_followers" ON "items"."id" = "item_followers"."item_id" WHERE "item_followers"."user_id" = 1[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
