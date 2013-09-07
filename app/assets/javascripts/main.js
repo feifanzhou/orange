@@ -6,7 +6,7 @@ function loadAllCategories() {
 		success: function(data) {
 			var html = categoriesList(data.categories, 'sidebarCategories');
 			$('#sidebarContent').html(html);
-			$('#content').html('<p>Timeline view</p>');
+			$('#content').append(timelineHeader(2));
 		}
 	});
 }
@@ -18,7 +18,7 @@ function loadAllPeople() {
 		success: function(data) {
 			var html = usersList(data.users, 'sidebarCategories');
 			$('#sidebarContent').html(html);
-			$('#content').html('<p>Timeline view</p>');
+			$('#content').append(timelineHeader(2));
 		}
 	});
 }
@@ -39,7 +39,7 @@ $('body').on('click', '#sidebarModeToggle .SegmentToggleItem', function() {
 $('body').on('click', '.CategoryListItem', function() {
 	if ($(this).hasClass('Selected')) {
 		$(this).removeClass('Selected');
-		$('#content').html('<p>Timeline view</p>');
+		$('#content').append(timelineHeader(2));
 		return;
 	}
 	$('.CategoryListItem').removeClass('Selected');

@@ -17,6 +17,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
       "uid": "53dd31a6cc6438192b2d7b09b1c1dd45",
       "css": "columns",
       "code": 59395,
@@ -57,6 +69,18 @@
       "css": "calendar-1",
       "code": 59397,
       "src": "entypo"
+    },
+    {
+      "uid": "68c7be0f4cab6b82d5725b1ba7cec4d6",
+      "css": "zoom-in",
+      "code": 59403,
+      "src": "elusive"
+    },
+    {
+      "uid": "295287b96e50d494ba38a1ed9e06d8db",
+      "css": "zoom-out",
+      "code": 59404,
+      "src": "elusive"
     }
   ]
 }
