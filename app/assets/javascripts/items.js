@@ -228,6 +228,8 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 	var hues = new Array();
 	for (var i = 0; i < groups.length; i++)
 		hues.push(Math.round(Math.random() * 360));
+	var seenIDs = [];
+	var duplicateIDs = [];
 	
 	for (var i = 0; i < groups.length; i++) {
 		$.ajax({
@@ -305,8 +307,6 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 				var markerOffset = 0.5 * markerWidth;	// To line up with marker, in middle of block;
 				var hourDivisor = (zoomLevel == 1 || zoomLevel == 2) ? 12 : 24;
 				var now = new Date();
-				console.log('sortedItems: ' + JSON.stringify(sortedItems, null, 2));
-				console.log('sortedItems length: ' + sortedItems.length);
 				for (var j = 0; j < sortedItems.length; j++) {
 					var rowHTML = "<div style='height: " + LEVEL_HEIGHT + "px' class='TimelineRowLevel'>";
 					for (var k = 0; k < sortedItems[j].length; k++) {
@@ -333,10 +333,18 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						else
 							iWidth = msdelta / (1000 * 3600 * 24) * markerWidth;
 
-						var hsl = 'hsl(' + hues[counter] + ', 89, 51)';
+						var hsl = 'hsl(' + hues[counter - 1] + ', 89, 51)';
 						var color = tinycolor(hsl);
 
-						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' class='TimelineItem'>" + item.name + "</div>";
+						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' data-item-id='" + item.id + "' class='TimelineItem'></div>";
+						
+						if ($.inArray(item.id, seenIDs) > -1) {
+							if ($.inArray(item.id, duplicateIDs) < 0) {
+								duplicateIDs.push(item.id);
+							}
+						}
+						else
+							seenIDs.push(item.id);
 					}
 					rowHTML += '</div>';
 					inners[counter - 1].push(rowHTML);
@@ -350,6 +358,23 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						html += '</div>';
 					}
 					$('#content').append(html);
+
+					// Draw vertical lines between the same items
+					for (var i = 0; i < duplicateIDs.length; i++) {
+						var offsets = [];
+						var currID = duplicateIDs[i];
+						var selector = "[data-item-id='" + currID + "']";
+						var left;
+						$(selector).each(function() {
+							var offset = $(this).offset();
+							offsets.push(offset.top);
+							left = offset.left;
+						});
+						offsets.sort();
+						var height = offsets[offsets.length - 1] - offsets[0];
+						var bar = "<span class='SameItemBar' style='height: " + height + "px; left: " + left + "px; top: " + offsets[0] + "px'>";
+						$('body').append(bar);
+					}
 				}
 			}
 		});
