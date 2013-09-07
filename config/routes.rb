@@ -11,6 +11,7 @@ Orange::Application.routes.draw do
   resources :tasks
   resources :users
 
+  # TODO: Make route resources plural
   get '/category/:id/items' => 'categories#items', as: :items_for_category
   get '/category/:id/all_items' => 'categories#items', as: :all_items_for_category
 

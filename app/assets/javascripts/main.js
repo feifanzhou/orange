@@ -46,6 +46,7 @@ $('body').on('click', '.CategoryListItem', function() {
 		$('#content').html(timelineHeader(2));
 		return;
 	}
+	$('.SameItemBar').remove();
 	$('.CategoryListItem').removeClass('Selected');
 	$(this).addClass('Selected');
 	var type = $(this).data('type');

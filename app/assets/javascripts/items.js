@@ -333,7 +333,9 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						else
 							iWidth = msdelta / (1000 * 3600 * 24) * markerWidth;
 
-						var hsl = 'hsl(' + hues[counter - 1] + ', 89, 51)';
+						var sat = (item.status == 'Completed') ? 89 : 9;
+						var lit = (item.status == 'Completed') ? 51 : 30;
+						var hsl = 'hsl(' + hues[counter - 1] + ', ' + sat + ', ' + lit + ')';
 						var color = tinycolor(hsl);
 
 						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' data-item-id='" + item.id + "' class='TimelineItem'></div>";
@@ -380,3 +382,26 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 		});
 	}
 }
+
+$('body').on('click', '#content, html, body', function() {
+	$('.TimelineItem').popover('destroy');
+});
+$('body').on('click', '.TimelineItem', function() {
+	$('.TimelineItem').popover('destroy');
+	var item = $(this);
+	var itemID = $(item).data('item-id');
+	var path = '/items/' + itemID;
+	$.ajax({
+		url: path,
+		type: 'GET',
+		success: function(data) {
+			var cutStart = data.indexOf('<!-- BEGIN_MODAL -->');
+			var cutEnd = data.indexOf('<!-- END_MODAL -->');
+			var html = data.slice(cutStart, cutEnd);
+			$(item).popover({
+				content: html,
+				html: true
+			}).popover('show');
+		}
+	});
+});

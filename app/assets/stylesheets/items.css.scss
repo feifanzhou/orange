@@ -1,3 +1,43 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+@import "shared";
+
+#itemContainer {
+  background: image-url('debut.png');
+  margin: 0;
+  padding: 10px;
+	width: 200px;
+  #itemTypePicker {
+    list-style: none;
+    margin: 0 0 20px 0;
+    width: 180px;
+    .PickerItem {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 10px 0;
+      text-align: center;
+      width: 60px;
+      @include vendor-prefix(transition, background 0.5s);
+      &:hover {
+        background: #CCC;
+        cursor: pointer;
+      }
+      &.Selected {
+        background: $mainOrange;
+        color: white;
+      }
+    }
+  }
+  #itemCheckbox {
+    font-size: 24px;
+    margin-right: 6px;
+  }
+  #itemName {
+    display: inline-block;
+    font-size: 24px;
+    margin-top: -2px;
+  }
+}

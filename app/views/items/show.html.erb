@@ -1,0 +1,10 @@
+<!-- BEGIN_MODAL -->
+<div id='itemContainer'>
+  <ul id='itemTypePicker'>
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Task" %>'>&#xE807;</li>  <!-- Task -->
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Event" %>'>&#xE805;</li>  <!-- Event -->
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Note" %>'>&#xE806;</li>  <!-- Message -->
+  </ul>
+  <span class='Icon' id='itemCheckbox'><%= (@item.status == 'Completed') ? '&#xE807;'.html_safe : '&#xE808;'.html_safe %></span> <h1 id='itemName'><%= @item.name %></h1>
+</div>
+<!-- END_MODAL -->
