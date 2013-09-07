@@ -1,5 +1,5 @@
 function userListItem(user) {
-	return "<li class='CategoryListItem'>" + user.fname + ' ' + user.lname + "</li>";
+	return "<li class='CategoryListItem' data-user-id='" + user.id + "'>" + user.fname + ' ' + user.lname + "</li>";
 }
 function usersList(users, customID) {
 	if (customID == null)

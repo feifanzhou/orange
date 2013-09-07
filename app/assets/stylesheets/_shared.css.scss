@@ -35,11 +35,12 @@ $Twinkle: image-url('twinkle.png');
 		width: 97px;
 		@include vendor-prefix(transition, background 0.75s);
 		&:hover {
-			background: transparentize(white, 0.75);
+			background: #666;
 			cursor: pointer;
 		}
 		&.Selected {
-			background: transparentize(white, 0.5);
+			background: #CCC;
+			color: #222;
 		}
 	}
 }

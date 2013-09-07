@@ -71,8 +71,17 @@
         border-bottom: 1px solid #222;
         border-top: 1px solid #555;
         padding: 15px;
+        @include vendor-prefix(transition, background 0.5s);
+        &:hover {
+          background: #666;
+          cursor: pointer;
+        }
         &:last-child {
           border-bottom: none;
+        }
+        &.Selected {
+          background: #CCC;
+          color: #222;
         }
       }
     }

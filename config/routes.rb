@@ -5,7 +5,10 @@ Orange::Application.routes.draw do
   root to: 'main#main'
 
   resources :categories
+  resources :events
   resources :items
+  resources :notes
+  resources :tasks
   resources :users
 
   # Sample of regular route:
