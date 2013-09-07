@@ -180,4 +180,12 @@
       }
     }
   }
+  #timebar {
+    background: $mainOrange;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    @include vendor-prefix(transition, left 0.1s);
+  }
 }

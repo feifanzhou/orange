@@ -18,7 +18,7 @@ function loadAllPeople() {
 		success: function(data) {
 			var html = usersList(data.users, 'sidebarCategories');
 			$('#sidebarContent').html(html);
-			$('#content').append(timelineHeader(2));
+			$('#content').html(timelineHeader(2));
 		}
 	});
 }
@@ -39,7 +39,7 @@ $('body').on('click', '#sidebarModeToggle .SegmentToggleItem', function() {
 $('body').on('click', '.CategoryListItem', function() {
 	if ($(this).hasClass('Selected')) {
 		$(this).removeClass('Selected');
-		$('#content').append(timelineHeader(2));
+		$('#content').html(timelineHeader(2));
 		return;
 	}
 	$('.CategoryListItem').removeClass('Selected');
@@ -70,4 +70,19 @@ $('body').on('click', '.CategoryListItem', function() {
 			}
 		});
 	}
+});
+
+function timebar() {
+	return "<span id='timebar'></span>";
+}
+$('body').on('mouseleave', '#timelineHeader', function() {
+	$('#timebar').remove();
+});
+$('body').on('mouseover', '.TimelineMarkerContainer', function() {
+	if ($('#timebar').length == 0)
+		$('#content').append(timebar());
+	var left = $(this).find('.TimelineMarker').first().position().left + 1;
+	setTimeout(function() {
+		$('#timebar').attr('style', ('left: ' + left + 'px;'));
+	}, 50);
 });
