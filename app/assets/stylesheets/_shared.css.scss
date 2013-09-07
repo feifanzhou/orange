@@ -48,6 +48,14 @@ body {
 	background: $Twinkle;
 }
 
+.Checkbox {
+	@include vendor-prefix(transition, color 0.25s);
+	&:hover {
+		color: transparentize(darken($mainOrange, 5%), 0.35);
+		cursor: pointer;
+	}
+}
+
 .Icon {
 	font-family: $Zorange !important;
 }

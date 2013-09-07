@@ -91,3 +91,27 @@ $('body').on('mouseover', '.TimelineMarkerContainer', function() {
 		$('#timebar').attr('style', ('left: ' + left + 'px;'));
 	}, 50);
 });
+
+$('body').on('click', '.Checkbox', function(event) {
+	event.stopPropagation();
+	var itemID = $(this).parent().data('item-id');
+	var newStatus = 'Completed';
+	if ($(this).hasClass('Checked')) {
+		newStatus = '';
+	}
+	// Optimistically update UI
+	if ($(this).hasClass('Checked')) {
+		$(this).html('&#xE808');
+		$(this).removeClass('Checked');
+	}
+	else {
+		$(this).html('&#xE807');
+		$(this).addClass('Checked');
+	}
+	$.ajax({
+		url: '/items/' + itemID,
+		type: 'PUT',
+		data: { status: newStatus },
+		dataType: 'JSON'
+	});
+});

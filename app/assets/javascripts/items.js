@@ -10,10 +10,13 @@ function itemListItem(item) {
 		itemIcon = '';
 
 	checkIcon = '&#xE808';	// Unchecked box
-	if (item.status == 'Completed')
+	var isChecked = false;
+	if (item.status == 'Completed') {
 		checkIcon = '&#xE807';	// Checked box
+		isChecked = true;
+	}
 
-	return "<li class='ItemListItem' data-item-id='" + item.id + "' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Icon'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
+	return "<li class='ItemListItem' data-item-id='" + item.id + "' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Checkbox Icon " + ((isChecked) ? "Checked" : "") + "'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
 }
 function itemsList(items, customID) {
 	if (customID == null)
@@ -383,7 +386,7 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 	}
 }
 
-$('body').on('click', '#content, html, body', function() {
+$('body').on('click', '#content', function() {
 	$('.TimelineItem').popover('destroy');
 });
 $('body').on('click', '.TimelineItem', function() {
