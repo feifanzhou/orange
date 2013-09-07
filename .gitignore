@@ -2,3 +2,6 @@ tmp
 /tmp
 tmp/cache
 /tmp/cache
+
+log
+/log

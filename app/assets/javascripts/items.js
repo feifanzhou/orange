@@ -13,7 +13,7 @@ function itemListItem(item) {
 	if (item.status == 'Completed')
 		checkIcon = '&#xE807';	// Checked box
 
-	return "<li class='ItemListItem' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Icon'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
+	return "<li class='ItemListItem' data-item-id='" + item.id + "' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Icon'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
 }
 function itemsList(items, customID) {
 	if (customID == null)
