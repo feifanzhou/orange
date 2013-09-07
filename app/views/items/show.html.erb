@@ -1,9 +1,9 @@
 <!-- BEGIN_MODAL -->
 <div id='itemContainer' data-item-id='<%= @item.id %>'>
   <ul id='itemTypePicker'>
-    <li class='PickerItem Icon <%= "Selected" if @item.type == "Task" %>'>&#xE807;</li>  <!-- Task -->
-    <li class='PickerItem Icon <%= "Selected" if @item.type == "Event" %>'>&#xE805;</li>  <!-- Event -->
-    <li class='PickerItem Icon <%= "Selected" if @item.type == "Note" %>'>&#xE806;</li>  <!-- Message -->
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Task" %>' data-type='Task'>&#xE807;</li>  <!-- Task -->
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Event" %>' data-type='Event'>&#xE805;</li>  <!-- Event -->
+    <li class='PickerItem Icon <%= "Selected" if @item.type == "Note" %>' data-type='Note'>&#xE806;</li>  <!-- Message -->
   </ul>
   <span class='Checkbox Icon <%= "Checked" if (@item.status == "Completed") %>' id='itemCheckbox'><%= (@item.status == 'Completed') ? '&#xE807;'.html_safe : '&#xE808;'.html_safe %></span> <h1 id='itemName'><%= @item.name %></h1>
   <button class='btn <%= "Hidden" if @item.subitems.count > 0 %>' id='addSubItemsButton'>Add Subitems</button>

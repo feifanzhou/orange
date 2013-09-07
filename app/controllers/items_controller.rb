@@ -13,7 +13,8 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    @item.status = params[:status]
+    @item.status = params[:status] if !params[:status].blank?
+    @item.type = params[:item][:type] if !params[:item][:type].blank?
     @item.save
 
     respond_to do |format|

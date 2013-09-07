@@ -461,3 +461,23 @@ $('body').on('keypress', '#item_name', function(event) {
 		}
 	});
 });
+
+$('body').on('click', '#itemTypePicker .PickerItem', function() {
+	var itemID = $('#itemContainer').data('item-id');
+	var type = $(this).data('type');
+	var selected = $(this);
+	$.ajax({
+		url: '/items/' + itemID,
+		type: 'PUT',
+		data: {
+			item: {
+				type: type
+			}
+		},
+		dataType: 'JSON',
+		success: function(data) {
+			$('#itemTypePicker .PickerItem').removeClass('Selected');
+			$(selected).addClass('Selected');
+		}
+	});
+});
