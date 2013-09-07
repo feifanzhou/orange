@@ -1,5 +1,19 @@
 function itemListItem(item) {
-	return "<li class='ItemListItem' data-user-id='" + item.id + "'>" + item.name + "</li>";
+	var itemIcon;
+	var checkIcon;
+	
+	if (item.type == 'Event')
+		itemIcon = '&#xE805';	// Calendar
+	else if (item.type == 'Note')
+		itemIcon = '&#xE806';	// Note
+	else
+		itemIcon = '';
+
+	checkIcon = '&#xE808';	// Unchecked box
+	if (item.status == 'Completed')
+		checkIcon = '&#xE807';	// Checked box
+
+	return "<li class='ItemListItem' data-user-id='" + item.id + "'><span class='ItemListItemIcon Icon'>" + itemIcon + "</span><span class='ItemListItemCheckbox Icon'>" + checkIcon + "</span><span class='ItemListItemTitle'>" + item.name + "</span></li>";
 }
 function itemsList(items, customID) {
 	if (customID == null)

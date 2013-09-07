@@ -96,4 +96,28 @@
   position: absolute;
   right: 0;
   top: 40px;
+  .ItemsList {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    .ItemListItem {
+      border-bottom: 1px solid transparentize(white, 0.75);
+      height: 20px;
+      padding: 6px 0;
+      position: relative;
+      .ItemListItemIcon {
+        color: $mainOrange;
+        left: 0;
+        position: absolute;
+      }
+      .ItemListItemCheckbox {
+        left: 30px;
+        position: absolute;
+      }
+      .ItemListItemTitle {
+        left: 48px;
+        position: absolute;
+      }
+    }
+  }
 }

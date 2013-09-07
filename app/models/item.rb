@@ -14,7 +14,7 @@
 #
 
 class Item < ActiveRecord::Base
-  attr_accessible :name, :status, :start_at, :end_at, :user_id
+  attr_accessible :name, :status, :start_at, :end_at, :user_id, :type
 
   belongs_to :user
   has_many :categories, through: :item_categories
@@ -23,6 +23,10 @@ class Item < ActiveRecord::Base
   has_many :item_followers
   has_many :users, through: :item_followers
 
+  def as_json(options = {})
+  	return { type: type }.merge super
+  end
+  
   def creator
   	return User.find(self.user_id)
   end
