@@ -208,11 +208,15 @@ function dateDiffInDays(a, b) {
 function dateDiffInHours(a, b) {
   // Discard the time and time-zone information.
   var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate(), a.getHours(), a.getMinutes(), a.getSeconds());
-  console.log('utc1: ' + utc1);
   var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate(), b.getHours(), b.getMinutes(), b.getSeconds());
-  console.log('utc2: ' + utc2);
 
   return Math.floor((utc2 - utc1) / _MS_PER_HOUR);
+}
+function dateDiffInMS(a, b) {
+  var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate(), a.getHours(), a.getMinutes(), a.getSeconds());
+  var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate(), b.getHours(), b.getMinutes(), b.getSeconds());
+
+  return utc2 - utc1;
 }
 function drawTimelineForGroups(groups, groupType, zoomLevel) {
 	var rootPath = groupType.toLowerCase();
@@ -226,9 +230,8 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 		hues.push(Math.round(Math.random() * 360));
 	
 	for (var i = 0; i < groups.length; i++) {
-		console.log('i@1: ' + i);
 		$.ajax({
-			url: '/' + rootPath + '/' + groups[i].id + '/items',
+			url: '/' + rootPath + '/' + groups[i].id + '/all_items',
 			type: 'GET',
 			dataType: 'JSON',
 			success: function(data) {
@@ -252,6 +255,7 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						break;
 				}
 				var sortedItems = new Array();
+				console.log('counter: ' + counter);
 				for (var j = 0; j < items.length; j++) {
 					var item = items[j];
 					var end_at = new Date(item.end_at);
@@ -264,6 +268,7 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 					var level = 0;	// Start at lowest level
 					var sorted = false
 					while (!sorted) {
+						console.log('try sorting at level: ' + level);
 						if (sortedItems[level] == null || sortedItems[level].length == 0) {
 							// Creating a new level if needed
 							sortedItems[level] = [item];
@@ -286,7 +291,10 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 							sorted = true;
 							break;
 						}
-						level += 1;		// If overlapped, increment level and try again
+						else {
+							level += 1;		// If overlapped, increment level and try again
+							continue;
+						}
 					}
 				}
 
@@ -306,6 +314,8 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 						var end_at = new Date(item.end_at);
 						var daysDiff = dateDiffInDays(now, start_at);
 						var left = (doubleZoom) ? (daysDiff * 2 * markerWidth) : (daysDiff * markerWidth);
+						if (item.id == 5)
+							console.log('#5 daysDiff: ' + daysDiff);
 						// alert(start_at.getHours());
 						if (doubleZoom) {
 							if (start_at.getHours() >= 12)
@@ -316,41 +326,44 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 							left += (start_at.getHours() / 24) * markerWidth;
 						}
 						left += markerOffset;
+						if (item.id == 5)
+							console.log('#5 left: ' + left);
 
-						console.log('start_at: ' + start_at);
-						console.log('end_at: ' + end_at);
 						var durationDays = dateDiffInDays(start_at, end_at);
-						console.log('durationDays: ' + durationDays);
 						// var fractionalDayDuration = end_at.getHours() / 24;
 						// durationDays += fractionalDayDuration;
 						// if (doubleZoom)
 						// 	durationDays /= 2;
 						// var iWidth = durationDays / endDays * width;
-						var iWidth = (doubleZoom) ? (durationDays * 2 * markerWidth) : (durationDays * markerWidth);
-						var durationHours = dateDiffInHours(start_at, end_at);
-						console.log('durationHours: ' + durationHours);
-						durationHours %= 24;
-						if (doubleZoom) {
-							if (durationHours >= 12)
-								iWidth += markerWidth;
-							iWidth += (durationHours % 12) / 12 * markerWidth;
-						}
-						else {
-							iWidth += (durationHours / 24) * markerWidth;
-						}
+						// var iWidth = (doubleZoom) ? (durationDays * 2 * markerWidth) : (durationDays * markerWidth);
+						// var durationHours = dateDiffInHours(start_at, end_at);
+						// durationHours %= 24;
+						// if (doubleZoom) {
+						// 	if (durationHours >= 12)
+						// 		iWidth += markerWidth;
+						// 	iWidth += (durationHours % 12) / 12 * markerWidth;
+						// }
+						// else {
+						// 	iWidth += (durationHours / 24) * markerWidth;
+						// }
+						var msdelta = dateDiffInMS(start_at, end_at);
+						var iWidth;
+						if (doubleZoom)
+							iWidth = msdelta / (1000 * 3600 * 12) * markerWidth;
+						else
+							iWidth = msdelta / (1000 * 3600 * 24) * markerWidth;
 
 						var hsl = 'hsl(' + hues[counter] + ', 89, 51)';
 						var color = tinycolor(hsl);
 
-						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' class='TimelineItem'></div>";
+						rowHTML += "<div style='background: " + color.toHexString() + "; left: " + left + "px; margin-top: " + ((LEVEL_HEIGHT - 8) / 2) + "px; width: " + iWidth + "px' class='TimelineItem'>" + item.name + "</div>";
 					}
-					rowHTML += '</div>';
+					rowHTML += '</div></div>';
 					// html += rowHTML;
 					inners.push(rowHTML);
 				}
 
 				if (counter >= (groups.length)) {
-					console.log('Last Success callback');
 					for (var x = 0; x < inners.length; x++)
 						html += inners[x];
 					$('#content').append(html);

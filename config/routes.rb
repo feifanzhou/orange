@@ -12,6 +12,7 @@ Orange::Application.routes.draw do
   resources :users
 
   get '/category/:id/items' => 'categories#items', as: :items_for_category
+  get '/category/:id/all_items' => 'categories#items', as: :all_items_for_category
 
   get '/user/:id/items' => 'users#items', as: :items_for_user
   get '/user/:id/all_items' => 'users#all_items', as: :all_items_for_user
