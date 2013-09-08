@@ -5,14 +5,29 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(params[:item])
-    @item.item_id = params[:parent_ID]
+    @item.item_id = params[:parent_ID] if (!params[:parent_ID].blank?)
     @user = User.find(params[:creator_ID])
     @item.user = @user
     success = @item.save
+    if !params[:recipients].blank?
+      rec = params[:recipients].split(',')
+      rec.each do |r|
+        user = nil
+        if /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.match(r.strip.downcase)
+          user = User.find_by_email(r.strip.downcase)
+        elsif /\d+/.match(r.strip)
+          user = User.find(r.strip)
+        end
+        if !user.blank?
+          ItemFollower.create(item_id: @item.id, user_id: user.id, is_read: false)
+        end
+      end
+    end
     respond_to do |format|
       format.js { render json: { status_code: 200, success: success, id: @item.id } }
     end
   end
+
   def show
     @item = Item.find(params[:id])
   end

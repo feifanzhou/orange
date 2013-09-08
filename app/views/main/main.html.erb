@@ -3,3 +3,16 @@
 <div id='content'>
 	
 </div>
+<div id='backdrop'></div>
+<div class='Modal' id='composeMessageModal'>
+	<div id='composeMessageRecipients'>
+		<input type='text' placeholder='Message recipients (user ID or email address for now), separated by commas' id='recipients' />
+	</div>
+	<div id='composeMessageBody'>
+		<textarea placeholder='Message content' id='messageBody'></textarea>
+	</div>
+	<div class='ModalFooter'>
+		<button class='btn' id='cancelModalButton'>Cancel</button>
+		<button class='btn btn-primary' id='confirmModalButton'>Send message</button>
+	</div>
+</div>

@@ -15,13 +15,13 @@
 #
 
 class Item < ActiveRecord::Base
-  attr_accessible :name, :status, :start_at, :end_at, :user_id, :type
+  attr_accessible :name, :status, :start_at, :end_at, :user_id, :type, :body
 
   belongs_to :user
   has_many :item_categories
   has_many :categories, through: :item_categories
-  has_one :item_assignee
-  has_one :user, through: :item_assignee
+  has_one :item_assignees
+  has_one :users, through: :item_assignees
   has_many :item_followers
   has_many :users, through: :item_followers
 

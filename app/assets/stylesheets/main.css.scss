@@ -95,8 +95,19 @@
   color: white;
   left: 0;
   position: absolute;
+  text-align: center;
   top: 40px;
   width: 240px;
+  .btn {
+    margin-top: 12px;
+    width: 200px;
+  }
+  .InboxList {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 8px;
+    text-align: left;
+  }
 }
 
 /***** Content styles *****/
@@ -245,4 +256,59 @@
 
 #itemContainer {
   color: #333;
+}
+
+#backdrop {
+  background: transparentize(black, 0.35);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  @include vendor-prefix(transition, opacity 0.5s);
+  &.Active {
+    opacity: 1;
+  }
+}
+
+::selection {
+  background: none !important;
+}
+.Modal {
+  background: white;
+  position: absolute;
+  top: 5000px;
+  width: 400px;
+  @include vendor-prefix(transition, #{ left 0.25s, top 0.5s });
+  input, textarea {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+  }
+  #composeMessageRecipients {
+    border-bottom: 1px solid #DDD;
+    padding: 6px 6px 0 6px;
+    #recipients {
+      width: 388px;
+    }
+  }
+  #composeMessageBody {
+    padding: 0 6px 6px 6px;
+    #messageBody {
+      height: 100px;
+      resize: none;
+    }
+  }
+  .ModalFooter {
+    background: lighten($mainOrange, 45%);
+    box-shadow: 0 -7px 6px -6px #EDEDED;
+    padding: 6px;
+    text-align: right;
+    #cancelModalButton {
+      margin-right: 4px;
+    }
+  }
 }

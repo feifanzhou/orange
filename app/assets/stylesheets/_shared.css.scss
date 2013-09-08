@@ -54,6 +54,10 @@ body {
 	font-family: $Sans !important;
 }
 
+.btn {
+	font-family: $Sans !important;
+}
+
 .Checkbox {
 	@include vendor-prefix(transition, color 0.25s);
 	&:hover {
@@ -112,4 +116,8 @@ label {
 			color: #222;
 		}
 	}
+}
+
+textarea {
+	font-family: $Sans !important;
 }
