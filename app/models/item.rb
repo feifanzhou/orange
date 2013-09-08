@@ -20,8 +20,8 @@ class Item < ActiveRecord::Base
   belongs_to :user
   has_many :item_categories
   has_many :categories, through: :item_categories
-  has_one :item_assignees
-  has_one :users, through: :item_assignees
+  has_one :item_assignee
+  has_one :user, through: :item_assignee
   has_many :item_followers
   has_many :users, through: :item_followers
 
@@ -29,11 +29,11 @@ class Item < ActiveRecord::Base
   has_many :subitems, foreign_key: 'item_id', class_name: 'Item'
 
   def as_json(options = {})
-  	return { type: type }.merge super
+    return { type: type }.merge super
   end
 
   def creator
-  	return (!self.user_id.blank?) ? User.find(self.user_id) : null
+    return (!self.user_id.blank?) ? User.find(self.user_id) : null
   end
 
   def all_followers
