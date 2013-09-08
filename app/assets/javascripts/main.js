@@ -1,3 +1,37 @@
+function selectTimeline() {
+	$('#headerViewMode .Icon').removeClass('Selected');
+	$('#headerTimeline').addClass('Selected');
+	$('#inbox').addClass('Hidden');
+	$('#sidebar').removeClass('Hidden');
+	$('#sidebarModeToggle .SegmentToggleItem:first-child').addClass('Selected');
+	loadAllCategories();
+}
+selectTimeline();	// On page load
+
+function selectInbox() {
+	$('#headerViewMode .Icon').removeClass('Selected');
+	$('#headerInbox').addClass('Selected');
+	var currUserID = getCookie('current_user_id');
+	$.ajax({
+		url: '/users/' + currUserID + '/inbox_items',
+		type: 'GET',
+		dataType: 'JSON',
+		success: function(data) {
+			var html = inboxList(data.items, 'inboxList');
+			$('#inbox').html(html);
+			$('#sidebar').addClass('Hidden');
+			$('#inbox').removeClass('Hidden');
+		}
+	});
+}
+
+$('body').on('click', '#headerTimeline', function() {
+	selectTimeline();
+});
+$('body').on('click', '#headerInbox', function() {
+	selectInbox();
+});
+
 function loadAllCategories() {
 	$.ajax({
 		url: '/categories',
@@ -12,8 +46,6 @@ function loadAllCategories() {
 		}
 	});
 }
-$('#sidebarModeToggle .SegmentToggleItem:first-child').addClass('Selected');
-loadAllCategories();
 function loadAllPeople() {
 	$.ajax({
 		url: '/users',

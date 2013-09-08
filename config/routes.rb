@@ -24,6 +24,7 @@ Orange::Application.routes.draw do
   get '/user/:id/created_items' => 'users#created_items', as: :user_created_items
   get '/user/:id/assigned_items' => 'users#assigned_items', as: :user_assigned_items
   get '/user/:id/followed_items' => 'users#followed_items', as: :user_followed_items
+  get '/users/:id/inbox_items' => 'users#inbox_items', as: :user_inbox_items
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

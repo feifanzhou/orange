@@ -18,6 +18,7 @@ class Item < ActiveRecord::Base
   attr_accessible :name, :status, :start_at, :end_at, :user_id, :type
 
   belongs_to :user
+  has_many :item_categories
   has_many :categories, through: :item_categories
   has_one :item_assignee
   has_one :user, through: :item_assignee

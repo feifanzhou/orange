@@ -40,4 +40,11 @@ class UsersController < ApplicationController
       format.js { render json: { user: @user, items: @user.followed_items } }
     end
   end
+
+  def inbox_items
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.js { render json: { user: @user, items: @user.inbox_items } }
+    end
+  end
 end

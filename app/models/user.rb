@@ -61,6 +61,14 @@ class User < ActiveRecord::Base
     return @items
   end
 
+  def inbox_items
+    @items = []
+    ItemFollower.where(user_id: self.id, is_read: false).each do |f|
+      @items << f.item
+    end
+    return @items
+  end
+
   def display_name
     return "#{ self.fname } #{ self.lname }"
   end

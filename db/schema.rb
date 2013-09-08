@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908001935) do
+ActiveRecord::Schema.define(:version => 20130908030909) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -36,8 +36,12 @@ ActiveRecord::Schema.define(:version => 20130908001935) do
   create_table "item_followers", :force => true do |t|
     t.integer  "item_id"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "is_read"
+    t.boolean  "is_flagged"
+    t.datetime "deferred_to"
+    t.datetime "read_time"
   end
 
   create_table "items", :force => true do |t|
