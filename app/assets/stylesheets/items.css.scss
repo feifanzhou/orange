@@ -44,6 +44,22 @@
     vertical-align: top;
     width: 160px;
   }
+
+  #setTimesPrompt {
+    font-weight: 300;
+    &:hover {
+      cursor: pointer;
+    }
+    .Icon {
+      color: transparentize(black, 0.35);
+    }
+  }
+  #setTimesFields {
+    display: none;
+    input {
+      width: 186px;
+    }
+  }
   hr {
     margin: 10px 0;
   }

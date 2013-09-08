@@ -21,6 +21,16 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.status = params[:status] if !params[:status].blank?
     @item.type = params[:item][:type] if !params[:item][:type].blank?
+    if !params[:item][:start].blank?
+      comps = params[:item][:start].split('-')
+      puts comps.to_s
+      @item.start_at = DateTime.new(comps[0].to_i, comps[1].to_i, comps[2].to_i, comps[3].to_i, comps[4].to_i, 0)
+    end
+    if !params[:item][:end].blank?
+      comps = params[:item][:end].split('-')
+      puts comps.to_s
+      @item.end_at = DateTime.new(comps[0].to_i, comps[1].to_i, comps[2].to_i, comps[3].to_i, comps[4].to_i, 0)
+    end
     @item.save
 
     respond_to do |format|

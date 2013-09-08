@@ -5,7 +5,13 @@
     <li class='PickerItem Icon <%= "Selected" if @item.type == "Event" %>' data-type='Event'>&#xE805;</li>  <!-- Event -->
     <li class='PickerItem Icon <%= "Selected" if @item.type == "Note" %>' data-type='Note'>&#xE806;</li>  <!-- Message -->
   </ul>
-  <span class='Checkbox Icon <%= "Checked" if (@item.status == "Completed") %>' id='itemCheckbox'><%= (@item.status == 'Completed') ? '&#xE807;'.html_safe : '&#xE808;'.html_safe %></span> <h1 id='itemName'><%= @item.name %></h1>
+  <span class='Checkbox Icon <%= "Checked" if (@item.status == "Completed") %>' id='itemCheckbox'><%= (@item.status == 'Completed') ? '&#xE807;'.html_safe : '&#xE808;'.html_safe %></span> 
+  <h1 id='itemName'><%= @item.name %></h1>
+  <p id='setTimesPrompt'><span class='Icon'>&#xE80A;</span> Set start and end times&hellip;</p>
+  <div id='setTimesFields'>
+    <input type='text' id='startTimeField' placeholder='Start (YYYY-MM-DD-HH-mm)' />
+    <input type='text' id='endTimeField' placeholder='End (YYYY-MM-DD-HH-mm)' />
+  </div>
   <hr />
   <button class='btn <%= "Hidden" if @item.subitems.count > 0 %>' id='addSubItemsButton'>Add Subitems</button>
   <div class='<%= "Hidden" if !@item.subitems || @item.subitems.count <= 0 %>' id='subitems'>

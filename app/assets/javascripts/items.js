@@ -489,3 +489,54 @@ $('body').on('click', '#itemTypePicker .PickerItem', function() {
 		}
 	});
 });
+
+$('body').on('click', '#setTimesPrompt', function(event) {
+	event.stopPropagation();
+	$('#setTimesFields').slideDown();
+});
+$('body').on('click', '#setTimesFields', function(event) {
+	event.stopPropagation();
+});
+
+$('body').on('keypress', '#startTimeField', function(event) {
+	var code = (event.keyCode) ? event.keyCode : event.which;
+	if (code != 13)
+		return;
+
+	var itemID = $('#itemContainer').data('item-id');
+	var input = $(this).val();
+	$.ajax({
+		url: '/items/' + itemID,
+		type: 'PUT',
+		data: {
+			item: {
+				start: input
+			}
+		},
+		dataType: 'JSON',
+		success: function(data) {
+			$('#startTimeField').css('color', 'rgba(219, 238, 211, 1)');
+		}
+	});
+});
+$('body').on('keypress', '#endTimeField', function(event) {
+	var code = (event.keyCode) ? event.keyCode : event.which;
+	if (code != 13)
+		return;
+
+	var itemID = $('#itemContainer').data('item-id');
+	var input = $(this).val();
+	$.ajax({
+		url: '/items/' + itemID,
+		type: 'PUT',
+		data: {
+			item: {
+				end: input
+			}
+		},
+		dataType: 'JSON',
+		success: function(data) {
+			$('#endTimeField').css('color', 'rgba(200, 225, 195, 1)');
+		}
+	});
+});
