@@ -9,16 +9,20 @@
 #  password_digest :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  remember_token  :string(255)
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :fname, :lname, :password_digest
+  attr_accessible :email, :fname, :lname, :password
 
   has_many :items
   has_many :item_assignees
   has_many :items, through: :item_assignees
   has_many :item_followers
   has_many :items, through: :item_followers
+
+  has_secure_password
+  before_save { create_remember_token if (self.password_digest && defined?(self.password_digest)) }
 
   # TODO: Why does User.items itself not work…?
   def all_items
@@ -55,5 +59,14 @@ class User < ActiveRecord::Base
       @items << f.item
     end
     return @items
+  end
+
+  def display_name
+    return "#{ self.fname } #{ self.lname }"
+  end
+
+  private
+  def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64
   end
 end

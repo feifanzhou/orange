@@ -1,0 +1,41 @@
+<div id='loginStuff'>
+  <p id='welcomeTo'>Welcome to</p>
+  <p id='welcomeProject'>reCOMMUNIQU&Eacute;</p>
+  <%= form_for(User.new, url: go_login_path, html: { id: 'loginForm' }) do |f| %>
+      <% if @user and @user.errors.any? %>
+        <div id="createLoginError">
+          <div class="alert alert-error">
+            The form contains <%= pluralize(@user.errors.count, "error") %>.
+          <ul>
+            <% @user.nice_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+          </div>
+        </div>
+      <% end %>
+
+  	<div class='Hidden' id='newAccountNames'>
+  	  <%= f.label :fname %>
+  	  <%= f.text_field :fname, placeholder: "First name" %>
+  	  
+  	  <%= f.label :lname %>
+  	  <%= f.text_field :lname, placeholder: "Last name" %>
+  	</div>
+  	
+  	<%= f.label :email %>
+  	<%= f.email_field :email, placeholder: "Email address" %>
+    <br />
+  	
+  	<%= f.label :password %>
+  	<%= f.password_field :password, placeholder: "Password" %>
+    <br />
+
+    <!-- This field should never be filled out. If it is, form was filled out by a script -->
+    <%= f.label :id %>
+    <%= f.text_field :id, placeholder: "Leave blank", autocomplete: 'off' %>
+    <%= f.submit "Log in", class: "btn btn-primary", id: 'loginButton' %>
+  <% end %>
+  <p class='Subtext' id='createAccount'>Create a new account</p>
+  <p class='Subtext Hidden' id='goLogin'>Login with existing account</p>
+</div>

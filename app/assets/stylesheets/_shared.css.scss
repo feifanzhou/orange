@@ -6,6 +6,9 @@ $Zorange: 'zorange';
 
 $Twinkle: image-url('twinkle.png');
 
+$btnPrimaryBackground: lighten($mainOrange, 15%);
+$btnPrimaryBackgroundHighlight: $mainOrange;
+
 @mixin vendor-prefix($name, $argument) {
   #{$name}: #{ $argument };
   -webkit-#{$name}: #{ $argument };
@@ -46,6 +49,7 @@ $Twinkle: image-url('twinkle.png');
 
 body {
 	background: $Twinkle;
+	color: white !important;
 }
 
 .Checkbox {
@@ -62,6 +66,10 @@ body {
 
 .Icon {
 	font-family: $Zorange !important;
+}
+
+label {
+	display: none !important;
 }
 
 .SameItemBar {

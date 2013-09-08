@@ -12,6 +12,8 @@ function loadAllCategories() {
 		}
 	});
 }
+$('#sidebarModeToggle .SegmentToggleItem:first-child').addClass('Selected');
+loadAllCategories();
 function loadAllPeople() {
 	$.ajax({
 		url: '/users',

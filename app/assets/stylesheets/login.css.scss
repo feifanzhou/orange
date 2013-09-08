@@ -1,0 +1,52 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "shared";
+
+#loginStuff {
+  margin: 180px auto;
+	width: 260px;
+  #welcomeTo {
+    color: transparentize(white, 0.4);
+    font-size: 26px;
+    font-weight: 300;
+  }
+  #welcomeProject {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 72px;
+  }
+  #loginForm {
+    input[type='text'] {
+      box-sizing: border-box;
+      height: 34px;
+      margin-bottom: 18px;
+      width: 128px;
+    }
+    input[type='email'], input[type='password'] {
+      box-sizing: border-box;
+      height: 34px;
+      margin-bottom: 12px;
+      width: 260px;
+    }
+    #user_id {
+      display: none;
+    }
+    #loginButton {
+      font-weight: 700;
+      margin-top: 4px;
+      width: 260px;
+    }
+  }
+  .Subtext {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 24px;
+    @include vendor-prefix(transition, color 0.5s);
+    &:hover {
+      color: lighten($mainOrange, 35%);
+      cursor: pointer;
+    }
+  }
+}
