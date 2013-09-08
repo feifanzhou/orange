@@ -327,6 +327,11 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 							left += (start_at.getHours() / 24) * markerWidth;
 						}
 						left += markerOffset;
+						var overflowComp = 0;
+						if (left < 0) {
+							overflowComp = 0 - left;
+							left = 0;
+						}
 
 						var durationDays = dateDiffInDays(start_at, end_at);
 						var msdelta = dateDiffInMS(start_at, end_at);
@@ -335,6 +340,7 @@ function drawTimelineForGroups(groups, groupType, zoomLevel) {
 							iWidth = msdelta / (1000 * 3600 * 12) * markerWidth;
 						else
 							iWidth = msdelta / (1000 * 3600 * 24) * markerWidth;
+						iWidth -= overflowComp;
 
 						var sat = (item.status == 'Completed') ? 89 : 9;
 						var lit = (item.status == 'Completed') ? 51 : 30;

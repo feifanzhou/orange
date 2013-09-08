@@ -63804,3 +63804,2604 @@ Processing by CategoriesController#items as JSON
   [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
   [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:16:07 -0400
+Processing by MainController#main as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered main/main.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 264ms (Views: 170.6ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /reset.css - 200 OK (2ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /_shared.css - 200 OK (1ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /_fonts.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /application.css - 200 OK (43ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /categories.css - 200 OK (1ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /items.css - 200 OK (5ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /main.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /modernizr.js - 200 OK (2ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /plugins.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-transition.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-button.js - 200 OK (32ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-carousel.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-collapse.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-dropdown.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-modal.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-scrollspy.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-tab.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-tooltip.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap-typeahead.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /bootstrap.js - 200 OK (14ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /tinycolor.js - 200 OK (1ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /_shared.js - 200 OK (1ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /categories.js - 200 OK (1ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /inbox.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /items.js - 200 OK (3ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /login.js - 200 OK (1ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /main.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /application.js - 200 OK (16ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /twinkle.png - 200 OK (1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (1.2ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 48ms (Views: 2.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.8ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 101ms (Views: 82.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:16:08 -0400
+Served asset /zorange.woff - 200 OK (1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:00 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (2.7ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (1.0ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered items/show.html.erb within layouts/application (46.5ms)
+Completed 500 Internal Server Error in 52ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308639214720'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:02 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItemFollower Load (0.4ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mItemAssignee Load (0.4ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308639214720'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:02 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.4ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered items/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308639214720'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:03 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308639214720'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:12 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered items/show.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 44ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308635523060'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2013-09-08 00:17:22 -0400
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-09-08 00:17:22 -0400
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 84ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (2.7ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:17:23 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/go_login" for 127.0.0.1 at 2013-09-08 00:17:34 -0400
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"osJv56hJSYCDHDIC5jVIUAikah+eIx+RIFZsA0qBnFo=", "user"=>{"fname"=>"", "lname"=>"", "email"=>"feifan@me.com", "password"=>"[FILTERED]", "id"=>""}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'feifan@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:17:34 -0400
+Processing by MainController#main as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:17:34 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:17:34 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:17:35 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:17:35 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:17:35 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (1.7ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:17:35 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:17:35 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 44ms (Views: 3.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:36 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItemFollower Load (0.3ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308639214720'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:17:42 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.3ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered items/show.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308635523060'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.6ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:18:44 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  [1m[36mItem Load (0.9ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItemFollower Load (0.4ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered items/show.html.erb within layouts/application (31.7ms)
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (undefined local variable or method `null' for #<Task:0x007fe4026b3788>):
+    18:   </div>
+    19:   <hr />
+    20:   <ul id='itemFollowers'>
+    21:     <% @item.all_followers.each do |f| %>
+    22:       <li class='ItemFollowerInitials'><%= f.initials %></li>
+    23:     <% end %>
+    24:   </ul>
+  app/models/item.rb:36:in `creator'
+  app/models/item.rb:42:in `all_followers'
+  app/views/items/show.html.erb:21:in `_app_views_items_show_html_erb__583003284585932346_70308635523060'
+
+
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Feifan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 50ms (Views: 42.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /debut.png - 200 OK (2ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.9ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:19:47 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/items.css?body=1&livereload=1378614050948" for 127.0.0.1 at 2013-09-08 00:20:50 -0400
+Compiled items.css  (962ms)  (pid 2303)
+Served asset /items.css - 200 OK (1014ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:20:52 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (66.5ms)
+Compiled application.css  (3ms)  (pid 2303)
+Completed 200 OK in 200ms (Views: 155.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /application.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /items.css - 200 OK (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:21:19 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:21:20 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:21:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:21:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:21:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:21:20 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Processing by MainController#main as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /categories.css - 200 OK (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:29 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (1.8ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:21:30 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-08 00:21:31 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/1/all_items" for 127.0.0.1 at 2013-09-08 00:21:31 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 1[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1
+  [1m[36mItemFollower Load (0.3ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+Completed 200 OK in 15ms (Views: 1.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/user/3/all_items" for 127.0.0.1 at 2013-09-08 00:21:31 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 3
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 3[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1
+  [1m[36mItemFollower Load (0.3ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 3[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/2/all_items" for 127.0.0.1 at 2013-09-08 00:21:31 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 2
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 2[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 3 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 2
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/4/all_items" for 127.0.0.1 at 2013-09-08 00:21:31 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 4
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 4[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:24:28 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.3ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 43ms (Views: 38.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (2.1ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:24:29 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Processing by MainController#main as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:24:32 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-08 00:24:34 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/1/all_items" for 127.0.0.1 at 2013-09-08 00:24:34 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 1[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/3/all_items" for 127.0.0.1 at 2013-09-08 00:24:34 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 3
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 3[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1
+  [1m[36mItemFollower Load (0.3ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 3[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user/2/all_items" for 127.0.0.1 at 2013-09-08 00:24:34 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 2
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 2[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 3 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 2
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/4/all_items" for 127.0.0.1 at 2013-09-08 00:24:34 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 4
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 4[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/4/inbox_items" for 127.0.0.1 at 2013-09-08 00:25:59 -0400
+Processing by UsersController#inbox_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mItemFollower Load (0.3ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4 AND "item_followers"."is_read" = 'f'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:26:02 -0400
+Processing by ItemsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.4ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 70ms (Views: 66.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:26:02 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:27:38 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mItemFollower Load (0.3ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (8.5ms)
+Compiled items.js  (0ms)  (pid 2303)
+Compiled application.js  (6ms)  (pid 2303)
+Completed 200 OK in 84ms (Views: 79.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /items.js - 200 OK (2ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (1.8ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (2.0ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:27:39 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Processing by MainController#main as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (1.9ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:27:43 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-08 00:27:45 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/1/all_items" for 127.0.0.1 at 2013-09-08 00:27:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 1
+  [1m[36mItemAssignee Load (0.3ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.3ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/user/4/all_items" for 127.0.0.1 at 2013-09-08 00:27:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 4[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 4
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/2/all_items" for 127.0.0.1 at 2013-09-08 00:27:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 2[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 2
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 3 LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 2[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/3/all_items" for 127.0.0.1 at 2013-09-08 00:27:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 3[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 3
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 3
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Processing by MainController#main as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (0.9ms)
+Compiled items.js  (0ms)  (pid 2303)
+Compiled application.js  (5ms)  (pid 2303)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items/1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."item_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."item_id" = 1[0m
+  [1m[35mItemFollower Load (0.3ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."item_id" = 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mItemAssignee Load (0.3ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."item_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /items.js - 200 OK (2ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:33 -0400
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /_fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /_shared.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/_shared.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /_shared.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inbox.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /inbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /items.js - 200 OK (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#index as JSON
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (1.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 00:28:34 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (3.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 00:28:35 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 00:28:35 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 00:28:35 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-09-08 00:28:45 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/1/all_items" for 127.0.0.1 at 2013-09-08 00:28:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = 1
+  [1m[36mItemAssignee Load (0.2ms)[0m  [1mSELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/user/3/all_items" for 127.0.0.1 at 2013-09-08 00:28:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 3[0m
+  [1m[35mItemAssignee Load (0.4ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 3
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1[0m
+  [1m[35mItemFollower Load (0.2ms)[0m  SELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 3
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 2 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user/4/all_items" for 127.0.0.1 at 2013-09-08 00:28:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 4[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 4
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/2/all_items" for 127.0.0.1 at 2013-09-08 00:28:45 -0400
+Processing by UsersController#all_items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = 2[0m
+  [1m[35mItemAssignee Load (0.2ms)[0m  SELECT "item_assignees".* FROM "item_assignees" WHERE "item_assignees"."user_id" = 2
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 3 LIMIT 1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 4 LIMIT 1
+  [1m[36mItemFollower Load (0.2ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 2[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 1 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 5 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.9ms)

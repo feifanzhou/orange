@@ -33,13 +33,13 @@ class Item < ActiveRecord::Base
   end
 
   def creator
-  	return User.find(self.user_id)
+  	return (!self.user_id.blank?) ? User.find(self.user_id) : null
   end
 
   def all_followers
     users = (self.item_followers.blank?) ? [] : self.item_followers.map(&:user)
     users << self.item_assignee.user if !self.item_assignee.blank?
     users << self.creator if !self.creator.blank?
-    return users
+    return users.uniq
   end
 end
