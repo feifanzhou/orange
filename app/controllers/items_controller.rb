@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:item])
     @item.item_id = params[:parent_ID] if (!params[:parent_ID].blank?)
     @user = User.find(params[:creator_ID])
-    @item.user = @user
+    @item.user_id = params[:creator_ID] if !@user.blank?
     success = @item.save
     if !params[:recipients].blank?
       rec = params[:recipients].split(',')

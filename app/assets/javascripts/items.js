@@ -439,6 +439,9 @@ $('body').on('click', '#addSubItemsButton', function(event) {
 	$('#subitems').removeClass('Hidden');
 });
 
+$('body').on('click', '#item_name', function(event) {
+	event.stopPropagation();
+});
 $('body').on('keypress', '#item_name', function(event) {
 	var code = (event.keyCode) ? event.keyCode : event.which;
 	if (code != 13)
@@ -470,7 +473,8 @@ $('body').on('keypress', '#item_name', function(event) {
 	});
 });
 
-$('body').on('click', '#itemTypePicker .PickerItem', function() {
+$('body').on('click', '#itemTypePicker .PickerItem', function(event) {
+	event.stopPropagation();
 	var itemID = $('#itemContainer').data('item-id');
 	var type = $(this).data('type');
 	var selected = $(this);
