@@ -47,4 +47,11 @@ class UsersController < ApplicationController
       format.js { render json: { user: @user, items: @user.inbox_items } }
     end
   end
+
+  def recipient_suggestions
+    users = User.recipient_suggestions(params[:input])
+    respond_to do |format|
+      format.js { render json: { users: users } }
+    end
+  end
 end

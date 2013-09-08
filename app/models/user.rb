@@ -77,6 +77,18 @@ class User < ActiveRecord::Base
     return "#{ self.fname.slice(0, 1) }#{ self.lname.slice(0, 1) }"
   end
 
+  def self.recipient_suggestions(input)
+    results = []
+    seen_indices = []
+    (User.where("fname ILIKE ?", "%#{ input }%".slice(1) + '%').append User.where("lname ILIKE ?", "%#{ input }%".slice(1) + '%').append User.where("email LIKE ?", "%#{ input }".slice(1) + '%')).flatten.each do |u|   # http://stackoverflow.com/a/9708553/472768
+      if !seen_indices.include? u.id
+        results << u
+        seen_indices << u.id
+      end
+    end
+    return results
+  end
+
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
