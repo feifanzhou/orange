@@ -21,3 +21,12 @@ test:
   database: orange-test
   pool: 5
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: ec2-54-221-236-207.compute-1.amazonaws.com
+  database: d5ohbpdap8fi4u
+  username: bjzzjkahahxzpz
+  password: XEVBCXDzQ1TPxn-fm4ceuFebPK
+  port: 5432
