@@ -9,7 +9,7 @@
 #headerBar {
 	background: $mainOrange;
 	height: 40px;
-	padding: 0 40px;
+	padding: 4px 14px 0 14px;
 	position: fixed;
 	width: 100%;
 	ul {
@@ -23,7 +23,7 @@
 			text-align: left;
 		}
 		&#headerFilters {
-			margin-left: 30px;
+			margin-left: 40px;
 			text-align: center;
 		}
 		li {

@@ -2,6 +2,7 @@
 
 $mainOrange: rgb(241, 98, 20);
 
+$Sans: 'Lato', sans-serif;
 $Zorange: 'zorange';
 
 $Twinkle: image-url('twinkle.png');
@@ -50,6 +51,7 @@ $btnPrimaryBackgroundHighlight: $mainOrange;
 body {
 	background: $Twinkle;
 	color: white !important;
+	font-family: $Sans !important;
 }
 
 .Checkbox {
@@ -66,6 +68,10 @@ body {
 
 .Icon {
 	font-family: $Zorange !important;
+}
+
+input {
+	font-family: $Sans !important;
 }
 
 label {

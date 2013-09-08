@@ -56861,3 +56861,363 @@ Processing by CategoriesController#items as JSON
   [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "3"]]
   [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3
 Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/_fonts.css?body=1&livereload=1378604868605" for 127.0.0.1 at 2013-09-07 21:47:48 -0400
+Compiled _fonts.css  (17ms)  (pid 27360)
+Served asset /_fonts.css - 200 OK (26ms)
+
+
+Started GET "/assets/_shared.css?body=1&livereload=1378604887910" for 127.0.0.1 at 2013-09-07 21:48:07 -0400
+Compiled _shared.css  (35ms)  (pid 27360)
+Served asset /_shared.css - 200 OK (44ms)
+
+
+Started GET "/assets/_shared.css?body=1&livereload=1378604898702" for 127.0.0.1 at 2013-09-07 21:48:18 -0400
+Compiled _shared.css  (50ms)  (pid 27360)
+Served asset /_shared.css - 200 OK (54ms)
+
+
+Started GET "/assets/_shared.css?body=1&livereload=1378604924272" for 127.0.0.1 at 2013-09-07 21:48:44 -0400
+Compiled _shared.css  (26ms)  (pid 27360)
+Served asset /_shared.css - 200 OK (29ms)
+
+
+Started POST "/go_login" for 127.0.0.1 at 2013-09-07 21:48:53 -0400
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LuXHxV3XwIQgZ7FzYMXjFiAXabIBq/DzyMQGshSP5l8=", "user"=>{"fname"=>"", "lname"=>"", "email"=>"feifan@me.com", "password"=>"[FILTERED]", "id"=>""}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'feifan@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-07 21:48:54 -0400
+Processing by MainController#main as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'D_mcuVrOY2lXZTIYIkb-kg' LIMIT 1
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered main/main.html.erb within layouts/application (1.5ms)
+Compiled items.css  (970ms)  (pid 27360)
+Compiled login.css  (21ms)  (pid 27360)
+Compiled main.css  (898ms)  (pid 27360)
+Compiled application.css  (3ms)  (pid 27360)
+Completed 200 OK in 2023ms (Views: 2022.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/_shared.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /_shared.css - 200 OK (0ms)
+
+
+Started GET "/assets/_fonts.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /_fonts.css - 200 OK (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /login.css - 200 OK (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /items.css - 200 OK (7ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /main.css - 200 OK (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/plugins.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /plugins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tinycolor.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /tinycolor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /main.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (1.9ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-07 21:48:56 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378604967133" for 127.0.0.1 at 2013-09-07 21:49:27 -0400
+Compiled main.css  (1040ms)  (pid 27360)
+Served asset /main.css - 200 OK (1050ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:49:28 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:49:28 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378604972391" for 127.0.0.1 at 2013-09-07 21:49:32 -0400
+Compiled main.css  (945ms)  (pid 27360)
+Served asset /main.css - 200 OK (952ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:49:33 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:49:33 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378604993241" for 127.0.0.1 at 2013-09-07 21:49:53 -0400
+Compiled main.css  (950ms)  (pid 27360)
+Served asset /main.css - 200 OK (957ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:49:54 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:49:54 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605000312" for 127.0.0.1 at 2013-09-07 21:50:00 -0400
+Compiled main.css  (938ms)  (pid 27360)
+Served asset /main.css - 200 OK (946ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:01 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:01 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605004573" for 127.0.0.1 at 2013-09-07 21:50:04 -0400
+Compiled main.css  (970ms)  (pid 27360)
+Served asset /main.css - 200 OK (978ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:05 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:05 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/category/1/items" for 127.0.0.1 at 2013-09-07 21:50:10 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-07 21:50:10 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605022164" for 127.0.0.1 at 2013-09-07 21:50:22 -0400
+Compiled main.css  (917ms)  (pid 27360)
+Served asset /main.css - 200 OK (925ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:23 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-07 21:50:23 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:23 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605030410" for 127.0.0.1 at 2013-09-07 21:50:30 -0400
+Compiled main.css  (973ms)  (pid 27360)
+Served asset /main.css - 200 OK (981ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:31 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-07 21:50:31 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:31 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605034951" for 127.0.0.1 at 2013-09-07 21:50:34 -0400
+Compiled main.css  (921ms)  (pid 27360)
+Served asset /main.css - 200 OK (929ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:35 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-07 21:50:35 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:36 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378605038225" for 127.0.0.1 at 2013-09-07 21:50:38 -0400
+Compiled main.css  (948ms)  (pid 27360)
+Served asset /main.css - 200 OK (955ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-07 21:50:39 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/debut.png" for 127.0.0.1 at 2013-09-07 21:50:39 -0400
+Served asset /debut.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-07 21:50:39 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
