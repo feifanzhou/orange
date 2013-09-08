@@ -80890,3 +80890,128 @@ Processing by UsersController#inbox_items as JSON
   [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 23 LIMIT 1[0m
   [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 24 LIMIT 1
 Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629337443" for 127.0.0.1 at 2013-09-08 04:35:37 -0400
+Compiled main.css  (866ms)  (pid 2303)
+Served asset /main.css - 200 OK (929ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:35:38 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:35:38 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629360763" for 127.0.0.1 at 2013-09-08 04:36:00 -0400
+Compiled main.css  (795ms)  (pid 2303)
+Served asset /main.css - 200 OK (802ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:36:01 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:36:01 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629398423" for 127.0.0.1 at 2013-09-08 04:36:38 -0400
+Compiled main.css  (796ms)  (pid 2303)
+Served asset /main.css - 200 OK (803ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:36:39 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:36:39 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629411206" for 127.0.0.1 at 2013-09-08 04:36:51 -0400
+Compiled main.css  (786ms)  (pid 2303)
+Served asset /main.css - 200 OK (841ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:36:52 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:36:52 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629414747" for 127.0.0.1 at 2013-09-08 04:36:54 -0400
+Compiled main.css  (807ms)  (pid 2303)
+Served asset /main.css - 200 OK (818ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:36:55 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:36:55 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1&livereload=1378629431327" for 127.0.0.1 at 2013-09-08 04:37:11 -0400
+Compiled main.css  (790ms)  (pid 2303)
+Served asset /main.css - 200 OK (798ms)
+
+
+Started GET "/assets/twinkle.png" for 127.0.0.1 at 2013-09-08 04:37:12 -0400
+Served asset /twinkle.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zorange.woff?9478844" for 127.0.0.1 at 2013-09-08 04:37:12 -0400
+Served asset /zorange.woff - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-09-08 04:37:20 -0400
+Processing by CategoriesController#index as JSON
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/category/1/all_items" for 127.0.0.1 at 2013-09-08 04:37:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mItem Load (1.6ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 1[0m
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/category/2/all_items" for 127.0.0.1 at 2013-09-08 04:37:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 2[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/category/3/all_items" for 127.0.0.1 at 2013-09-08 04:37:20 -0400
+Processing by CategoriesController#items as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "item_categories" ON "items"."id" = "item_categories"."item_id" WHERE "item_categories"."category_id" = 3[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/4/inbox_items" for 127.0.0.1 at 2013-09-08 04:37:29 -0400
+Processing by UsersController#inbox_items as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mItemFollower Load (0.4ms)[0m  [1mSELECT "item_followers".* FROM "item_followers" WHERE "item_followers"."user_id" = 4 AND "item_followers"."is_read" = 'f'[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 16 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 17 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 18 LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 19 LIMIT 1[0m
+  [1m[35mItem Load (340.8ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 20 LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 21 LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 22 LIMIT 1
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = 23 LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = 24 LIMIT 1
+Completed 200 OK in 355ms (Views: 3.1ms | ActiveRecord: 344.0ms)

@@ -312,3 +312,16 @@
     }
   }
 }
+
+.InboxList {
+  .InboxListItem {
+    border-bottom: 1px solid #222;
+    border-top: 1px solid #555;
+    font-size: 13px;
+    height: 46px;
+    line-height: 18px;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
