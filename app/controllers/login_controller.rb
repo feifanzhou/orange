@@ -12,7 +12,8 @@ class LoginController < ApplicationController
     end
     user = User.find_by_email(params[:user][:email].downcase)
     if user && user.authenticate(params[:user][:password])
-      cookies[:current_user] = user.remember_token
+      cookies[:current_user] = { value: user.remember_token, expires: 20.years.from_now }
+      cookies[:current_user_id] = { value: user.id, expires: 20.years.from_now }
       # if user.has_temp_password
       #   redirect_to pwchange_path
       # else
@@ -30,6 +31,7 @@ class LoginController < ApplicationController
         @user = User.new(params[:user].except(:id))
         if @user.save
           cookies[:current_user] = { value: @user.remember_token, expires: 20.years.from_now }
+          cookies[:current_user_id] = { value: @user.id, expires: 20.years.from_now }
           redirect_to root_path
         else
           # TODO: Make this error condition a lot more helpful

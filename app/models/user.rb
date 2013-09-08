@@ -65,6 +65,10 @@ class User < ActiveRecord::Base
     return "#{ self.fname } #{ self.lname }"
   end
 
+  def initials
+    return "#{ self.fname.slice(0, 1) }#{ self.lname.slice(0, 1) }"
+  end
+
   private
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64

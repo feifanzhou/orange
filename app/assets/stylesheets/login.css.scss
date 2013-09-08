@@ -18,6 +18,9 @@
     margin-bottom: 72px;
   }
   #loginForm {
+    #newAccountNames {
+      display: none;
+    }
     input[type='text'] {
       box-sizing: border-box;
       height: 34px;

@@ -19,8 +19,8 @@ class Item < ActiveRecord::Base
 
   belongs_to :user
   has_many :categories, through: :item_categories
-  has_one :item_assignees
-  has_one :users, through: :item_assignees
+  has_one :item_assignee
+  has_one :user, through: :item_assignee
   has_many :item_followers
   has_many :users, through: :item_followers
 
@@ -33,5 +33,12 @@ class Item < ActiveRecord::Base
 
   def creator
   	return User.find(self.user_id)
+  end
+
+  def all_followers
+    users = (self.item_followers.blank?) ? [] : self.item_followers.map(&:user)
+    users << self.item_assignee.user if !self.item_assignee.blank?
+    users << self.creator if !self.creator.blank?
+    return users
   end
 end

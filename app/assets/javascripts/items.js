@@ -440,11 +440,13 @@ $('body').on('keypress', '#item_name', function(event) {
 
 	var itemID = $('#itemContainer').data('item-id');
 	var input = $(this).val();
+	var creatorID = getCookie('current_user_id');
 	$.ajax({
 		url: '/items',
 		type: 'POST',
 		data: { 
-			parent_ID: itemID, 
+			parent_ID: itemID,
+			creator_ID: creatorID,
 			item: {
 				name: input 
 			}

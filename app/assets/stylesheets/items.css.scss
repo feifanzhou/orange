@@ -44,6 +44,9 @@
     vertical-align: top;
     width: 170px;
   }
+  hr {
+    margin: 10px 0;
+  }
   #addSubItemsButton {
     width: 100%;
   }
@@ -55,6 +58,22 @@
     }
     #item_name {
       width: 186px;
+    }
+  }
+
+  #itemFollowers {
+    list-style: none;
+    margin: 0;
+    .ItemFollowerInitials {
+      background: transparentize($mainOrange, 0.5);
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      height: 22px;
+      line-height: 22px;
+      padding: 3px;
+      text-align: center;
+      width: 22px;
     }
   }
 }
